@@ -1,0 +1,39 @@
+{
+  "TOOLBAR": {
+    "WORK" : "Work Experience",
+    "SCHOOL" : "Education",
+    "SKILLS" : "Skills",
+    "DOWNLOAD_CV": "Download CV"
+  },
+  "LANGUAGE": {
+    "DE": "German",
+    "EN": "English"
+  },
+  "GITHUB_LINKS": {
+    "CURRENT": "Current Repositories",
+    "ARCHIVED": "Archived Repositories"
+  },
+  "SKILLS": {
+    "CERTIFICATES": "Certificates"
+  },
+  "EDU": {
+    "TU_DORTMUND.TITLE": "Technical University of Dortmund, Germany",
+    "TU_DORTMUND.DESC": "<b>Bachelor of Science</b> in Computer Science <br /> <br /><b>Topic of the thesis:</b> Support of the architecture analysis regarding the dependency management in gradle projects <br /> <b>Final grade:</b> 2.6",
+    "LEIDEN.TITLE": "University of Leiden, Netherlands",
+    "LEIDEN.DESC": "Study abroad <br /> <br /><b>Main focus:</b> data mining and computer graphics",
+    "DO_HACKATHON.TITLE": "Accenture Digital Connected Hackathon",
+    "DO_HACKATHON.DESC": "Inspired by the topic 'Connect. Collaborate. Create', Stephanie and 3 fellow students, took part in the hackathon <i>Accenture Digital Connected Hackathon</i>. They introduced a prototype to connect people looking for volunteering opportunities with people looking for support.",
+    "ESN.TITLE": "Erasmus Student Network",
+    "ESN.DESC": "After studying abroad, Stephanie started to volunteer in the Erasmus Student Network organization (ESN) in Dortmund. By supporting international students and organizing cultural events, Stephanie actively shaped the campus life.",
+    "FU_BERLIN.TITLE": "Free University of Berlin, Germany",
+    "FU_BERLIN.DESC": "<b>Master of Science</b> in Computer Science <br /> <br /><b>Topic of the thesis:</b> First steps towards a taxonomy of software engineering contexts <br /> <b>Final grade:</b> 2.1",
+    "ALTO_HACKATHON.TITLE": "Aalto IoT Hackathon",
+    "ALTO_HACKATHON.DESC": "During her studies, Stephanie and two fellow students, took part in the hackathon <i>IoThon</i>, organized by the Aalto University in Helsinki. They implemented a tracking app to find lost pets with chips trackable by streetlights and reached the 2nd rank.",
+    "UPC_BARCELONA.TITLE": "Technical University of Catalonia, Spain",
+    "UPC_BARCELONA.DESC": "Study abroad <br /> <br /><b>Main focus:</b> IT entrepreneuship and virtual/augumented reality",
+    "PISA.TITLE": "IoT Summer School in Pisa",
+    "PISA.DESC": "Stephanie has attended the 52-hourse course <i>'Enabling Technologies for Industrial Internet of Things'</i> held at the University of Pisa, Department of Information Engineering as part of their summer school program.",
+    "GIRLSDAY.TITLE": "Girlsday Organization",
+    "GIRLSDAY.DESC": "Stephanie engaged several times to promote computer science among girls. Already two times, she organised the Girlsday, an open-door day for female high school students, within the IT company adesso SE."
+  }
+}
