@@ -1,0 +1,101 @@
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-container {
+  background-color: black;
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills {
+  padding-left: 100px;
+  width: 75%;
+  height: 50vh;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skills .img-container {
+  background-color: #222222;
+  border-radius: 10px;
+  border: dimgray 1px solid;
+  padding:10px;
+  width: 100px;
+  height: 100px;
+  align-content: center;
+}
+
+.skills .img-container:hover img {
+  transform: scale3d(1.2, 1.2, 1.2);
+}
+
+.skills img {
+  border-radius: 10px;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  object-fit: scale-down;
+}
+
+.title, .bottom-container {
+  padding-left: 100px;
+}
+
+.bottom-container {
+  width: calc(100vw-100px);
+  height:100%;
+  margin-top: 20px;
+  background-image: url("./../../../assets/images/certificates-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bounce-text {
+  border-radius: 25px;
+  color: white;
+  border: white 1px solid;
+  height: 20px;
+  padding: 10px;
+  width: fit-content;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.certificate-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 25px;
+  width: 100%;
+  animation: marquee 10s linear infinite;
+}
+
+.certificate-panel {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.certificate-panel:first-of-type {
+  background-color: white;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.certificate-panel img {
+  height: 150px;
+  width: 150px;
+}
+

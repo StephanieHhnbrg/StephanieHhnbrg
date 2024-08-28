@@ -24,9 +24,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -36,13 +38,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "3MB",
+                  "maximumError": "5MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "10kB",
+                  "maximumError": "20kB"
                 }
               ],
               "outputHashing": "all"
@@ -82,7 +84,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"

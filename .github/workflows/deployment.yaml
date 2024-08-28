@@ -1,0 +1,40 @@
+name: deployment
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - gh-pages
+    paths-ignore:
+      - 'dist/**'
+      - 'docs/**'
+
+jobs:
+  build:
+    env:
+      CI_COMMIT_MESSAGE: updates CI/CD Build Artifacts
+      CI_COMMIT_AUTHOR: Continuous Integration
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🌿 Check out branch
+        uses: actions/checkout@v3
+
+      - name: 💽 Install dependencies
+        run: |
+          npm ci
+
+      - name: 🚧 Build project for production
+        run: |
+          rm -r ./docs
+          npm run build-prod
+          cp -r "./dist/portfolio/browser/" "./docs"
+          cp "./docs/index.html" "./docs/404.html"
+
+      - name: 🎉 Commit & Push
+        run: |
+          git add .
+          git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+          git config --global user.email "username@users.noreply.github.com"
+          git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+          git push

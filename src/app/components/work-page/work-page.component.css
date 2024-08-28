@@ -1,0 +1,80 @@
+mat-icon, table {
+ color: white;
+}
+
+.divider {
+  height: 1px;
+}
+
+.divider-line {
+  margin-left: 10px;
+  height: 90%;
+  width: 0.5px;
+  background: linear-gradient(
+    180deg,
+    #0d1ce9 0%,
+    #0ce5db 50%,
+    #326d0d 100%
+  );
+}
+
+.title {
+  vertical-align: middle;
+}
+
+.project {
+  vertical-align: top;
+  font-size: x-small;
+}
+
+mat-icon:hover {
+  cursor: pointer;
+}
+
+.collapsed-icon {
+  animation: rotate90 300ms;
+  animation-fill-mode: forwards;
+}
+
+.collapsed-desc {
+  animation: slide-in 300ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate90 {
+  0% {
+    transform: rotate(0);
+  }
+
+  33% {
+    transform: rotate(-33deg);
+    background: linear-gradient(to bottom, #fff 0%, #fff 50%, #0d1ce9 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  66% {
+    transform: rotate(-66deg);
+    background: linear-gradient(to bottom,  #fff 0%, #0d1ce9 50%, #0ce5db 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  100% {
+    transform: rotate(-90deg);
+    background: linear-gradient(to bottom, #0d1ce9 0%, #0ce5db 50%, #326d0d 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 1;
+    color: white;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,22 @@
+<div class="page">
+  <div class="top-container">
+    <div class="title" id="skill-title">
+      <p>&nbsp;</p>
+      <h2>{{"TOOLBAR.SKILLS" | translate}}</h2>
+    </div>
+    <div class="skills">
+        <div class="img-container" *ngFor="let t of technologies">
+          <img src="./assets/images/logos/{{t}}">
+        </div>
+    </div>
+  </div>
+  <div class="bottom-container">
+      <p>&nbsp;</p>
+      <h2 id="cert-title">{{"SKILLS.CERTIFICATES" | translate}}</h2>
+      <div class="certificate-row">
+        <div class="certificate-panel" *ngFor="let c of certificates" >
+          <a href="{{c.url}}" target="_blank"><img src="./assets/images/certificates/{{c.img}}" ></a>
+        </div>
+      </div>
+  </div>
+</div>

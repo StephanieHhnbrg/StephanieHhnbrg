@@ -1,0 +1,39 @@
+<div class="page">
+  <div class="left">
+    <div class="title" id="school-title">
+      <p>&nbsp;</p>
+      <h2>{{"TOOLBAR.SCHOOL" | translate}}</h2>
+    </div>
+
+    <div class="carousel-container">
+      <div id="carousel" class="start-animation">
+        <ng-container *ngFor="let slide of slides; let i = index">
+            <div><img (click)="displaySlideDetails(slide, i)" class="carousel-item" src="{{slide.img}}"
+                      [ngClass]="{'highlighted': displayedSlide && i == displayedSlide.index}">
+            </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="img-container" *ngIf="displayedSlide">
+      <img src="{{displayedSlide.img}}">
+    </div>
+
+    <div class="desc-container" *ngIf="displayedSlide">
+      <div>
+        <p>{{displayedSlide.period}} | {{displayedSlide.translateKey+'.TITLE' | translate}}</p>
+        <small innerHtml="{{displayedSlide.translateKey+'.DESC' | translate}}"></small><br/>
+      </div>
+      <div class="button-row">
+        <button mat-icon-button *ngIf="displayedSlide.index > 0" (click)="displaySlideDetails(slides[displayedSlide.index-1], displayedSlide.index-1)">
+          <mat-icon>chevron_left</mat-icon>
+        </button>
+        <button mat-icon-button *ngIf="displayedSlide.index < slides.length-1" (click)="displaySlideDetails(slides[displayedSlide.index+1], displayedSlide.index+1)" class="right-button">
+          <mat-icon>chevron_right</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

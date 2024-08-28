@@ -1,0 +1,59 @@
+mat-toolbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  border: 1px solid #333;
+  width: 100px;
+  box-shadow: 3px 0 5px -2px #222;
+}
+
+.top, .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+small {
+  font-size: xx-small;
+}
+
+.top a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.top a:hover {
+  cursor: pointer;
+  background-color: dimgrey;
+  transform: scale(1.1);
+}
+
+.bottom a:hover, a:visited, a:link, a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.linkedin svg, .mail mat-icon{
+  transform: translateY(5px);
+}
+
+.gh-button img {
+  object-fit: cover;
+  vertical-align: middle;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  margin-right: 10px;
+}

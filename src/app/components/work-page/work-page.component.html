@@ -1,0 +1,31 @@
+<div class="page">
+  <p>&nbsp;</p>
+  <h2 id="work-title">{{"TOOLBAR.WORK" | translate}}</h2>
+
+  <table>
+    <div class="work-row" *ngFor="let data of workData">
+      <tr>
+        <td>
+          <mat-icon (click)="data.isExpanded=!data.isExpanded" [ngClass]="{'collapsed-icon': !data.isExpanded}">expand_circle_down</mat-icon>
+        </td>
+        <td class="title">
+          &nbsp;{{ data.work.position }} <small>| {{ data.work.company }}</small>
+          <small *ngIf="!data.isExpanded && data.work.projects.length>0">&nbsp;({{data.work.projects[data.work.projects.length-1].start}} - {{data.work.projects[0].end}})</small>
+        </td>
+      </tr>
+      <tr [ngClass]="{'collapsed-desc': !data.isExpanded}">
+        <td class="divider"><div class="divider-line" role="separator" aria-label="Divider"></div></td>
+        <td class="project">
+          <div *ngFor="let project of data.work.projects; let i = index">
+            <p>{{project.start}} - {{project.end}} | {{project.location}}</p>
+            <p>Project: {{project.name}}</p>
+            <li>{{project.description}}</li>
+            <p>&nbsp;</p>
+          </div>
+        </td>
+      </tr>
+    </div>
+  </table>
+
+  <div style="height: 5vh;"></div>
+</div>

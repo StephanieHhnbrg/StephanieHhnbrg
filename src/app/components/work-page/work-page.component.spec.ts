@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { WorkPageComponent } from './work-page.component';
+
+describe('WorkPageComponent', () => {
+  let component: WorkPageComponent;
+  let fixture: ComponentFixture<WorkPageComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [WorkPageComponent]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(WorkPageComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
