@@ -34,6 +34,7 @@ export class SkillPageComponent implements OnInit {
     "css.png",
     "docker.png",
     "kubernetes.png",
+
     "helm.svg",
     "rancher.png",
     "argocd.png",

@@ -1,0 +1,77 @@
+#bg-img {
+  background-image: url("./../../../assets/images/mountain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  width: 90%;
+}
+
+.scroll-down-arrow mat-icon {
+  animation: bounce 2s infinite;
+}
+
+.scroll-down-arrow mat-icon:hover {
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1.8) translateY(0);
+  }
+  50% {
+    transform: scale(1.8) translateY(-20px);
+  }
+}
+
+.blend-svg {
+  position: fixed;
+  top: 10px;
+  left: 150px;
+}
+
+.subtitle {
+  padding-top: 100px;
+  padding-left: 100px;
+}
+
+.subtitle div {
+  position: relative;
+  overflow: hidden;
+  width: 380px;
+  height: 50px;
+  display: flex;
+}
+
+.sliding-text {
+  position: absolute;
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: slideInOut 5s linear infinite;
+  font-size: 12px; /* Adjust text size */
+}
+
+/* Keyframes for sliding effect */
+@keyframes slideInOut2 {
+  0% {
+    transform: translateX(100%); /* Start off to the right */
+  }
+  50% {
+    transform: translateX(0); /* Enter fully into view */
+  }
+  100% {
+    transform: translateX(-100%); /* Exit to the left */
+  }
+}
+
+.init stop {
+  stop-color: black;
+}

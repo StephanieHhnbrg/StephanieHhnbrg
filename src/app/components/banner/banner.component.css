@@ -1,0 +1,7 @@
+.banner-container {
+  transform: translateY(60px) translateX(-14vw) rotateZ(-10deg);
+}
+
+svg {
+  width: 43vw;
+}

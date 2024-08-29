@@ -1,0 +1,10 @@
+<div class="carousel-container">
+  <div id="carousel" class="start-animation">
+    <ng-container *ngFor="let slide of slides; let i = index">
+      <div><img (click)="clickOnCarouselItem(i)" class="carousel-item" src="{{slide.img}}"
+                [ngClass]="{'highlighted':i == highlightedItemIndex}">
+      </div>
+    </ng-container>
+  </div>
+  <app-banner></app-banner>
+</div>

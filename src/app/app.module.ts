@@ -14,11 +14,14 @@ import {routes} from "./app.routes";
 import { provideRouter, RouterOutlet } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatMenuModule } from '@angular/material/menu';
-import {WorkPageComponent} from "./components/work-page/work-page.component";
-import { SkillPageComponent } from './components/skill-page/skill-page.component';
-import { SchoolPageComponent } from './components/school-page/school-page.component';
+import {WorkPageComponent} from "./pages/work-page/work-page.component";
+import { SkillPageComponent } from './pages/skill-page/skill-page.component';
+import { SchoolPageComponent } from './pages/school-page/school-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {GithubIconComponent} from "./components/github-icon/github-icon.component";
+import {HomePageComponent} from "./pages/home-page/home-page.component";
+import {CarouselComponent} from "./components/carousel/carousel.component";
+import {BannerComponent} from "./components/banner/banner.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -31,7 +34,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     WorkPageComponent,
     SkillPageComponent,
     SchoolPageComponent,
+    HomePageComponent,
     GithubIconComponent,
+    CarouselComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,

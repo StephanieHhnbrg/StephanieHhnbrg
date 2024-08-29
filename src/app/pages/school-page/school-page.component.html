@@ -6,13 +6,10 @@
     </div>
 
     <div class="carousel-container">
-      <div id="carousel" class="start-animation">
-        <ng-container *ngFor="let slide of slides; let i = index">
-            <div><img (click)="displaySlideDetails(slide, i)" class="carousel-item" src="{{slide.img}}"
-                      [ngClass]="{'highlighted': displayedSlide && i == displayedSlide.index}">
-            </div>
-        </ng-container>
-      </div>
+      <app-carousel [highlightedItemIndex]="displayedSlide ? displayedSlide.index : -1"
+                    [slides]="slides"
+                    (carouselItemClicked)="displaySlideDetails($event)"
+      ></app-carousel>
     </div>
   </div>
 
@@ -27,10 +24,10 @@
         <small innerHtml="{{displayedSlide.translateKey+'.DESC' | translate}}"></small><br/>
       </div>
       <div class="button-row">
-        <button mat-icon-button *ngIf="displayedSlide.index > 0" (click)="displaySlideDetails(slides[displayedSlide.index-1], displayedSlide.index-1)">
+        <button mat-icon-button *ngIf="displayedSlide.index > 0" (click)="displaySlideDetails(displayedSlide.index-1)">
           <mat-icon>chevron_left</mat-icon>
         </button>
-        <button mat-icon-button *ngIf="displayedSlide.index < slides.length-1" (click)="displaySlideDetails(slides[displayedSlide.index+1], displayedSlide.index+1)" class="right-button">
+        <button mat-icon-button *ngIf="displayedSlide.index < slides.length-1" (click)="displaySlideDetails(displayedSlide.index+1)" class="right-button">
           <mat-icon>chevron_right</mat-icon>
         </button>
       </div>

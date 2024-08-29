@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {AnimationService} from "../../services/animation.service";
 
 @Component({
@@ -7,11 +7,11 @@ import {AnimationService} from "../../services/animation.service";
   styleUrl: './school-page.component.scss'
 })
 export class SchoolPageComponent implements OnInit {
+
   private innerHeight: any;
   private workpageHeight = 0;
   private skillpageHeight = 0;
 
-  public displayedSlide: {img: string, translateKey:string, period:string, index: number} | undefined;
   public slides = [
     {img: "./assets/images/education/dortmund.png", translateKey: "EDU.TU_DORTMUND", period: "2013 - 2017"},
     {img: "./assets/images/education/leiden.png", translateKey: "EDU.LEIDEN", period: "2014 - 2015"},
@@ -23,6 +23,7 @@ export class SchoolPageComponent implements OnInit {
     {img: "./assets/images/education/pisa.png", translateKey: "EDU.PISA", period: "2021"},
     {img: "./assets/images/education/girlsday.png", translateKey: "EDU.GIRLSDAY", period: "2019 / 2021"},
   ];
+  public displayedSlide: {img: string, translateKey:string, period:string, index: number} | undefined;
 
   constructor(private animationService: AnimationService) {}
 
@@ -47,16 +48,16 @@ export class SchoolPageComponent implements OnInit {
     const startAnimation = this.innerHeight + this.workpageHeight + (this.skillpageHeight * 0.6);
     const endAnimation = this.innerHeight + this.workpageHeight + (this.skillpageHeight * 0.8);
     this.animationService.animateElementsOpacity(scrollPosition, startAnimation, endAnimation, '.carousel-item');
+    this.animationService.animateElementsOpacity(scrollPosition, startAnimation, endAnimation, '.banner-container');
 
     if (scrollPosition < startTitleAnimation) {
       this.displayedSlide = undefined;
     }
   }
 
-
-  public displaySlideDetails(slide: {img: string, translateKey:string, period:string}, index: number) {
-    this.displayedSlide = undefined;
-    this.displayedSlide = {...slide, index};
+  public displaySlideDetails(index: number) {
+    let slide = index >= 0 && index < this.slides.length ? this.slides[index] : undefined;
+    this.displayedSlide = slide ? {...slide, index} : undefined;
   }
 
 }
