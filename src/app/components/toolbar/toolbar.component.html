@@ -1,20 +1,21 @@
 <mat-toolbar color="primary" class="mat-elevation-z8">
   <div class="top">
-    <a (click)="scroll('work')">
-      <mat-icon>work</mat-icon>
-      <small>{{"TOOLBAR.WORK" | translate}}</small>
-    </a>
+    <ng-container *ngIf="enableBreadcrumbScrollingButtons">
+      <a (click)="scroll('work')">
+        <mat-icon>work</mat-icon>
+        <small>{{"TOOLBAR.WORK" | translate}}</small>
+      </a>
 
-    <a (click)="scroll('skills')">
-      <mat-icon>star</mat-icon>
-      <small>{{"TOOLBAR.SKILLS" | translate}}</small>
-    </a>
+      <a (click)="scroll('skills')">
+        <mat-icon>star</mat-icon>
+        <small>{{"TOOLBAR.SKILLS" | translate}}</small>
+      </a>
 
-    <a (click)="scroll('school')">
-      <mat-icon>school</mat-icon>
-      <small>{{"TOOLBAR.SCHOOL" | translate}}</small>
-    </a>
-
+      <a (click)="scroll('school')">
+        <mat-icon>school</mat-icon>
+        <small>{{"TOOLBAR.SCHOOL" | translate}}</small>
+      </a>
+    </ng-container>
   </div>
 
   <div class="bottom">
@@ -40,7 +41,7 @@
     </mat-menu>
 
     <button mat-icon-button [matMenuTriggerFor]="contact_menu">
-      <mat-icon>more_horiz</mat-icon>
+      <mat-icon>person</mat-icon>
     </button>
     <mat-menu #contact_menu="matMenu" yPosition="above">
       <button class="mail" mat-menu-item><a href="mailTo:stephanie.hohenberg@gmail.com"><mat-icon>mail</mat-icon>E-Mail</a></button>
@@ -50,7 +51,8 @@
         </svg>
         <span>&nbsp;&nbsp;&nbsp;LinkedIn</span>
       </button>
-      <button class="mail" mat-menu-item><a download="cv-stephanie-hohenberg.pdf" href="./assets/cv-stephanie-hohenberg.pdf"><mat-icon>download</mat-icon>{{"TOOLBAR.DOWNLOAD_CV" | translate}}</a></button>
+      <button class="download" mat-menu-item>
+        <a download="cv-stephanie-hohenberg.pdf" [href]="cvLinkCurrentLang"><mat-icon>download</mat-icon>{{"TOOLBAR.DOWNLOAD_CV" | translate}}</a></button>
     </mat-menu>
   </div>
 </mat-toolbar>

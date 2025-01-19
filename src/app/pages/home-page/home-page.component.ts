@@ -1,6 +1,4 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {TranslateService} from "@ngx-translate/core";
-
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -55,7 +53,6 @@ export class HomePageComponent implements OnInit {
   }
 
   public scroll(elementId: string) {
-    console.log(elementId);
     const el = document.getElementById(elementId);
     if (el) {
       el.scrollIntoView({behavior: "smooth"});

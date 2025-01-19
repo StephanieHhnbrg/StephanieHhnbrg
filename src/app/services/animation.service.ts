@@ -54,7 +54,6 @@ export class AnimationService {
     const elements = document.querySelectorAll<HTMLElement>(elementSelector);
     let displayTiles = elements.length;
     let opacity = 1;
-    console.log("opacity:"+elements.length);
     if (elements.length>0) {
       const progress = (scrollPosition - startAnimation) / (endAnimation - startAnimation);
       if (scrollPosition > startAnimation && scrollPosition < endAnimation) {

@@ -43,8 +43,6 @@ export class BannerComponent implements OnInit {
       if (scrollPosition > startAnimation) {
         const progress = (scrollPosition - startAnimation) / (endAnimation - startAnimation);
         let percent = 30 + (7*progress);
-        console.log("progress:"+progress);
-        console.log("%:"+percent);
         textElement.setAttribute("startOffset", `${percent}%`);
       }
     }

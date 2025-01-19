@@ -13,6 +13,9 @@
     "CURRENT": "Current Repositories",
     "ARCHIVED": "Archived Repositories"
   },
+  "ANIMATION": {
+    "DESCRIPTION": "Software Engineer\nFullstack Developer\nIT Consultant"
+  },
   "SKILLS": {
     "CERTIFICATES": "Certificates"
   },

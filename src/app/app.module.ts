@@ -22,6 +22,10 @@ import {GithubIconComponent} from "./components/github-icon/github-icon.componen
 import {HomePageComponent} from "./pages/home-page/home-page.component";
 import {CarouselComponent} from "./components/carousel/carousel.component";
 import {BannerComponent} from "./components/banner/banner.component";
+import {AnimationPageComponent} from "./pages/animation-page/animation-page.component";
+import {OldPageComponent} from "./pages/old-page/old-page.component";
+import {CvPdfDialog} from "./components/cv-pdf-dialog/cv-pdf-dialog.component";
+import {MatDialogModule} from "@angular/material/dialog";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -30,6 +34,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    OldPageComponent,
+    AnimationPageComponent,
     ToolbarComponent,
     WorkPageComponent,
     SkillPageComponent,
@@ -37,7 +43,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomePageComponent,
     GithubIconComponent,
     CarouselComponent,
-    BannerComponent
+    BannerComponent,
+    CvPdfDialog
   ],
   imports: [
     BrowserModule,
@@ -51,7 +58,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule
+    MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule, MatDialogModule
   ],
   providers: [
     provideRouter(routes),
