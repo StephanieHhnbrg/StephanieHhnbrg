@@ -1,10 +1,12 @@
-.vertical-toolbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50px;
-  height: 100vh;
-  z-index: 10;
+@media (min-width: 600px) {
+  .toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100vh;
+    z-index: 10;
+  }
 }
 
 .scroll-container {
