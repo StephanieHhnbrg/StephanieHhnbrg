@@ -30,6 +30,8 @@ jobs:
           npm run build-prod
           cp -r "./dist/portfolio/browser/" "./docs"
           cp "./docs/index.html" "./docs/404.html"
+          cp "./src/robots.txt" "./docs/robots.txt"
+          cp "./src/sitemap.xml" "./docs/sitemap.xml"
 
       - name: 🎉 Commit & Push
         run: |
