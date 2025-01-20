@@ -1,22 +1,5 @@
 <mat-toolbar color="primary" class="mat-elevation-z8">
-  <div class="top">
-    <ng-container *ngIf="enableBreadcrumbScrollingButtons">
-      <a (click)="scroll('work')">
-        <mat-icon>work</mat-icon>
-        <small>{{"TOOLBAR.WORK" | translate}}</small>
-      </a>
-
-      <a (click)="scroll('skills')">
-        <mat-icon>star</mat-icon>
-        <small>{{"TOOLBAR.SKILLS" | translate}}</small>
-      </a>
-
-      <a (click)="scroll('school')">
-        <mat-icon>school</mat-icon>
-        <small>{{"TOOLBAR.SCHOOL" | translate}}</small>
-      </a>
-    </ng-container>
-  </div>
+  <div class="top"></div>
 
   <div class="bottom">
     <button mat-icon-button [matMenuTriggerFor]="gh_menu">

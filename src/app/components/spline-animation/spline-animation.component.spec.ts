@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SkillPageComponent } from './skill-page.component';
+import { SplineAnimationComponent } from './spline-animation.component';
 
-describe('SkillPageComponent', () => {
-  let component: SkillPageComponent;
-  let fixture: ComponentFixture<SkillPageComponent>;
+describe('HomePageComponent', () => {
+  let component: SplineAnimationComponent;
+  let fixture: ComponentFixture<SplineAnimationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SkillPageComponent]
+      imports: [SplineAnimationComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SkillPageComponent);
+    fixture = TestBed.createComponent(SplineAnimationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

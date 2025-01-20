@@ -14,16 +14,9 @@ import {routes} from "./app.routes";
 import { provideRouter, RouterOutlet } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatMenuModule } from '@angular/material/menu';
-import {WorkPageComponent} from "./pages/work-page/work-page.component";
-import { SkillPageComponent } from './pages/skill-page/skill-page.component';
-import { SchoolPageComponent } from './pages/school-page/school-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {GithubIconComponent} from "./components/github-icon/github-icon.component";
-import {HomePageComponent} from "./pages/home-page/home-page.component";
-import {CarouselComponent} from "./components/carousel/carousel.component";
-import {BannerComponent} from "./components/banner/banner.component";
-import {AnimationPageComponent} from "./pages/animation-page/animation-page.component";
-import {OldPageComponent} from "./pages/old-page/old-page.component";
+import {SplineAnimationComponent} from "./components/spline-animation/spline-animation.component";
 import {CvPdfDialog} from "./components/cv-pdf-dialog/cv-pdf-dialog.component";
 import {MatDialogModule} from "@angular/material/dialog";
 
@@ -34,16 +27,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    OldPageComponent,
-    AnimationPageComponent,
+    SplineAnimationComponent,
     ToolbarComponent,
-    WorkPageComponent,
-    SkillPageComponent,
-    SchoolPageComponent,
-    HomePageComponent,
     GithubIconComponent,
-    CarouselComponent,
-    BannerComponent,
     CvPdfDialog
   ],
   imports: [

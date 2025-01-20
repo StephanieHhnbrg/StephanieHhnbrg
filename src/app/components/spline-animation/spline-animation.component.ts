@@ -1,16 +1,16 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import { Application } from '@splinetool/runtime';
-import {CvPdfDialog} from "../../components/cv-pdf-dialog/cv-pdf-dialog.component";
+import {CvPdfDialog} from "../cv-pdf-dialog/cv-pdf-dialog.component";
 import {MatDialog} from "@angular/material/dialog";
 import {TranslateService} from "@ngx-translate/core";
 import {firstValueFrom, Subscription} from "rxjs";
 import {CV_LINKS} from "../../ links.data";
 @Component({
-  selector: 'app-animation-page',
-  templateUrl: './animation-page.component.html',
-  styleUrl: './animation-page.component.css'
+  selector: 'app-spline-animation',
+  templateUrl: './spline-animation.component.html',
+  styleUrl: './spline-animation.component.css'
 })
-export class AnimationPageComponent implements OnInit, OnDestroy {
+export class SplineAnimationComponent implements OnInit, OnDestroy {
 
   private subscriptions: Subscription[] = [];
 

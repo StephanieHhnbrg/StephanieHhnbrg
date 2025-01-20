@@ -2,7 +2,6 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import {CV_LINKS} from "../../ links.data";
 import {Subscription} from "rxjs";
-import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-toolbar',
@@ -19,9 +18,8 @@ export class ToolbarComponent implements OnInit, OnDestroy {
   ];
 
   public cvLinkCurrentLang: string;
-  public enableBreadcrumbScrollingButtons = false;
 
-  constructor(private translate: TranslateService, private router: Router) {
+  constructor(private translate: TranslateService) {
     this.cvLinkCurrentLang = CV_LINKS.get("en")!;
   }
 
@@ -29,15 +27,6 @@ export class ToolbarComponent implements OnInit, OnDestroy {
     this.subscriptions.push(this.translate.onLangChange.subscribe(event => {
       this.cvLinkCurrentLang = CV_LINKS.get(event.lang) || CV_LINKS.get("en")!;
     }));
-
-    this.enableBreadcrumbScrollingButtons =  this.router.url.includes("deprecated");
-  }
-
-  public scroll(elementId: string) {
-    const el = document.getElementById(elementId);
-    if (el) {
-      el.scrollIntoView({behavior: "smooth"});
-    }
   }
 
   public switchLanguage(lang: string) {
