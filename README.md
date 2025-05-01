@@ -36,7 +36,7 @@ In my [portfolio project](https://stephaniehhnbrg.github.io/StephanieHhnbrg/), y
 [![Snyk](https://img.shields.io/badge/Snyk-4C4A73?logo=snyk&logoColor=fff)](#)
 
 
-⭐ Check out my <a href="https://www.credly.com/badges/c6b64523-67e5-4954-a528-cb3b383c6ace/public_url">certifications and badges</a>
+⭐ Check out my <a href="https://www.credly.com/users/stephanie-hohenberg">certifications and badges</a>
 
 
 
