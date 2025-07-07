@@ -19,6 +19,14 @@ import {GithubIconComponent} from "./components/github-icon/github-icon.componen
 import {SplineAnimationComponent} from "./components/spline-animation/spline-animation.component";
 import {CvPdfDialog} from "./components/cv-pdf-dialog/cv-pdf-dialog.component";
 import {MatDialogModule} from "@angular/material/dialog";
+import {BlogArticlesComponent} from "./components/blog-articles/blog-articles.component";
+import {SpeakerSessionsComponent} from "./components/speaker-sessions/speaker-sessions.component";
+import {MatCardModule} from "@angular/material/card";
+import {MatChipsModule} from "@angular/material/chips";
+import {CertificationsComponent} from "./components/certifications/certifications.component";
+import {MatDividerModule} from "@angular/material/divider";
+import {MonthYearPipe} from "./pipes/month-year.pipe";
+import {TabNavigatorComponent} from "./components/tab-navigator/tab-navigator.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -30,7 +38,12 @@ export function HttpLoaderFactory(http: HttpClient) {
     SplineAnimationComponent,
     ToolbarComponent,
     GithubIconComponent,
-    CvPdfDialog
+    CvPdfDialog,
+    BlogArticlesComponent,
+    SpeakerSessionsComponent,
+    CertificationsComponent,
+    TabNavigatorComponent,
+    MonthYearPipe
   ],
   imports: [
     BrowserModule,
@@ -44,7 +57,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule, MatDialogModule
+    MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule, MatDialogModule,
+    MatCardModule, MatChipsModule, MatDividerModule,
   ],
   providers: [
     provideRouter(routes),

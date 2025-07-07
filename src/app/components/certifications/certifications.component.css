@@ -1,0 +1,47 @@
+
+mat-card {
+  min-width: 500px;
+  max-width: 500px;
+  margin: 95px 10px 10px;
+  color: white;
+}
+
+.mat-mdc-card-title {
+  font-size: 18px !important;
+}
+
+.mat-mdc-card-subtitle {
+  font-size: 12px !important;
+  width: 460px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.badge-desc {
+  font-size: small;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.banner-image {
+  align-self: center;
+  width: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+  transform: translateY(-50%);
+}
+
+mat-card-header, mat-card-content {
+  transform: translateY(-75px);
+}
+
+.accenture-banner {
+  background-color: white;
+  border-radius: 50% !important;
+}

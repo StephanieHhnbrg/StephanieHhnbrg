@@ -12,5 +12,24 @@
   },
   "ANIMATION": {
     "DESCRIPTION": "Software Engineer\nFullstack Entwicklerin\nIT Beraterin"
-  }
+  },
+  "TITLE": {
+    "ARTICLES": "Meine Tech-Artikel",
+    "TALKS": "Speaker-Auftritte",
+    "SESSIONS": "Sessions",
+    "EVENTS": "Events",
+    "CERTIFICATIONS": "Meine Zertifizierungen"
+  },
+  "TABS": {
+    "ARTICLES": "Blog Artikel",
+    "TALKS": "Tech Talks",
+    "CERTIFICATIONS": "Zertifizierungen"
+  },
+  "BUTTON": {
+    "READ_MORE": "Lese mehr",
+    "VIEW_SESSION": "Session ansehen",
+    "SEE_BADGE": "Badge ansehen"
+  },
+  "TALKS.UPCOMING": "demnächst",
+  "CERTIFICATIONS.ISSUED_BY": "ausgestellt von"
 }

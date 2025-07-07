@@ -1,0 +1,5 @@
+<div class="frame">
+  <button mat-button (click)="navigateTo('articles')" [ngClass]="{'active': active === 'articles', 'not-active': active != 'articles'}">{{"TABS.ARTICLES" | translate}}</button>
+  <button mat-button (click)="navigateTo('talks')" [ngClass]="{'active': active === 'talks', 'not-active': active != 'talks'}">{{"TABS.TALKS" | translate}}</button>
+  <button mat-button (click)="navigateTo('certs')" [ngClass]="{'active': active === 'certs', 'not-active': active != 'certs'}">{{"TABS.CERTIFICATIONS" | translate}}</button>
+</div>

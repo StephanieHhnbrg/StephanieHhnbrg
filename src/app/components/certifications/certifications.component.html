@@ -1,0 +1,27 @@
+<div class="container" *ngIf="badges.length > 0">
+  <h2>{{"TITLE.CERTIFICATIONS" | translate}}</h2>
+  <div class="row">
+    <mat-card *ngFor="let badge of badges" appearance="outlined">
+      <img mat-card-image class="banner-image" [src]="badge.imageLink"
+      [ngClass]="{'accenture-banner': badge.issuer === 'Accenture'}">
+      <mat-card-header>
+        <mat-card-title>{{badge.name}}</mat-card-title>
+        <mat-card-subtitle><span>{{badge.date}}</span><span>{{"CERTIFICATIONS.ISSUED_BY" | translate}} {{badge.issuer}}</span></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-chip-set>
+          <mat-chip *ngFor="let skill of badge.skills">{{skill}}</mat-chip>
+        </mat-chip-set>
+        <div class="row">
+          <div>
+            <span class="badge-desc">{{badge.description}}</span>
+            <a mat-button color="primary" [href]="badge.url" target="_blank">{{"BUTTON.SEE_BADGE" | translate}}</a>
+          </div>
+
+        </div>
+
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

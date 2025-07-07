@@ -12,5 +12,24 @@
   },
   "ANIMATION": {
     "DESCRIPTION": "Software Engineer\nFullstack Developer\nIT Consultant"
-  }
+  },
+  "TITLE": {
+    "ARTICLES": "Insights & Tutorials - My latest writings",
+    "TALKS": "Speaker Highlights - Tech Talks I’ve Delivered",
+    "SESSIONS": "Sessions",
+    "EVENTS": "Events",
+    "CERTIFICATIONS": "Certifications"
+  },
+  "TABS": {
+    "ARTICLES": "Articles",
+    "TALKS": "Tech Talks",
+    "CERTIFICATIONS": "Certifications"
+  },
+  "BUTTON": {
+    "READ_MORE": "Read more",
+    "VIEW_SESSION": "View session",
+    "SEE_BADGE": "See badge"
+  },
+  "TALKS.UPCOMING": "upcoming",
+  "CERTIFICATIONS.ISSUED_BY": "issued by"
 }

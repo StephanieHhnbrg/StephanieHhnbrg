@@ -1,0 +1,20 @@
+.frame {
+  border: solid 1px white;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+.mat-mdc-button {
+  color: white !important;
+}
+
+.not-active:hover {
+  background: #B2AFE5;
+  background: linear-gradient(117deg,rgba(178, 175, 229, 0.38) 0%, rgba(148, 14, 181, 0.36) 37%, rgba(65, 146, 204, 0.56) 72%, rgba(18, 14, 14, 0.46) 90%);
+}
+
+.active {
+  background: #833AB4;
+  background: linear-gradient(117deg,rgba(178, 175, 229, 1) 0%, rgba(148, 14, 181, 0.84) 37%, rgba(65, 146, 204, 0.73) 72%, rgba(18, 14, 14, 0.88) 90%);
+  color: white;
+}
