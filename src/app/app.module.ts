@@ -27,6 +27,9 @@ import {CertificationsComponent} from "./components/certifications/certification
 import {MatDividerModule} from "@angular/material/divider";
 import {MonthYearPipe} from "./pipes/month-year.pipe";
 import {TabNavigatorComponent} from "./components/tab-navigator/tab-navigator.component";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {BurgerIconNavigatorComponent} from "./components/burger-icon-navigator/burger-icon-navigator.component";
+import {ContactButtonsComponent} from "./components/contact-buttons/contact-buttons.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -43,6 +46,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SpeakerSessionsComponent,
     CertificationsComponent,
     TabNavigatorComponent,
+    BurgerIconNavigatorComponent,
+    ContactButtonsComponent,
     MonthYearPipe
   ],
   imports: [
@@ -58,7 +63,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     }),
     MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule, MatDialogModule,
-    MatCardModule, MatChipsModule, MatDividerModule,
+    MatCardModule, MatChipsModule, MatDividerModule, MatSnackBarModule
   ],
   providers: [
     provideRouter(routes),

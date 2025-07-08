@@ -1,10 +1,18 @@
-<div class="toolbar">
-  <app-toolbar></app-toolbar>
-</div>
+<ng-container *ngIf="!isMobile">
+  <div  class="toolbar">
+    <app-toolbar></app-toolbar>
+  </div>
+  <app-spline-animation></app-spline-animation>
+</ng-container>
 
-<app-spline-animation></app-spline-animation>
+
+
 <div class="container">
-  <app-tab-navigator></app-tab-navigator>
+  <div *ngIf="isMobile">
+    <app-burger-icon-navigator></app-burger-icon-navigator>
+  </div>
+  <app-tab-navigator *ngIf="!isMobile"></app-tab-navigator>
+
   <router-outlet></router-outlet>
 </div>
 

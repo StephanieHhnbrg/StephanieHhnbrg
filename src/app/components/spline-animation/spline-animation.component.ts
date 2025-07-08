@@ -5,6 +5,8 @@ import {MatDialog} from "@angular/material/dialog";
 import {TranslateService} from "@ngx-translate/core";
 import {firstValueFrom, Subscription} from "rxjs";
 import {CV_LINKS} from "../../ links.data";
+import {environment} from '../../../environment/environment';
+
 @Component({
   selector: 'app-spline-animation',
   templateUrl: './spline-animation.component.html',
@@ -21,7 +23,7 @@ export class SplineAnimationComponent implements OnInit, OnDestroy {
     // https://www.npmjs.com/package/@splinetool/runtime
     const spline = new Application(<HTMLCanvasElement>canvas);
     await firstValueFrom(this.translate.get('_'));
-    spline.load('https://prod.spline.design/AxZheWuU4DZSXNUO/scene.splinecode',
+    spline.load(`https://prod.spline.design/${environment.splineId}/scene.splinecode`,
       { description: this.translate.instant("ANIMATION.DESCRIPTION"), isEnglish: true })
       .then(() => {
         spline.addEventListener('mouseUp', (e) => {

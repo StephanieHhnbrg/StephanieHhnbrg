@@ -1,0 +1,17 @@
+<button mat-icon-button class="burger-button" aria-label="navigation" [matMenuTriggerFor]="nav_menu">
+  <mat-icon aria-hidden="false" fontIcon="menu"></mat-icon>
+</button>
+<mat-menu #nav_menu="matMenu" yPosition="below">
+  <button mat-menu-item (click)="navigateTo('articles')" [ngClass]="{'active': active === 'articles', 'not-active': active != 'articles'}">{{"TABS.ARTICLES" | translate}}</button>
+  <button mat-menu-item (click)="navigateTo('talks')" [ngClass]="{'active': active === 'talks', 'not-active': active != 'talks'}">{{"TABS.TALKS" | translate}}</button>
+  <button mat-menu-item (click)="navigateTo('certs')" [ngClass]="{'active': active === 'certs', 'not-active': active != 'certs'}">{{"TABS.CERTIFICATIONS" | translate}}</button>
+
+  <button mat-menu-item>
+    <a href="https://github.com/StephanieHhnbrg" target="_blank">
+      <app-github-icon class="gh-icon"></app-github-icon>
+      <span>&nbsp;&nbsp;&nbsp;GitHub</span>
+    </a>
+  </button>
+
+  <app-contact-buttons></app-contact-buttons>
+</mat-menu>

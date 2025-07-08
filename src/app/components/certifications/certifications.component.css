@@ -1,7 +1,26 @@
+@media (max-width: 600px) {
+  h2 {
+    margin-left: 5px;
+  }
+
+  mat-card {
+    min-width: 95vw;
+    max-width: 95vw;
+  }
+
+  .mat-mdc-card-subtitle {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 600px) {
+  mat-card {
+    min-width: 500px;
+    max-width: 500px;
+  }
+}
 
 mat-card {
-  min-width: 500px;
-  max-width: 500px;
   margin: 95px 10px 10px;
   color: white;
 }

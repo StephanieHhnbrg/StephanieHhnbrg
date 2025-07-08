@@ -7,12 +7,16 @@
     height: 100vh;
     z-index: 10;
   }
+
+  .container {
+    padding: 150px;
+  }
 }
 
 .container {
   min-height: 150vh;
   padding-top: 0 !important;
   background: #B2AFE5;
-  background: linear-gradient(180deg,rgba(178, 175, 229, 1) 0%, rgba(69, 69, 74, 0.84) 19%, rgba(18, 14, 14, 0.88) 83%);  padding: 150px;
+  background: linear-gradient(180deg,rgba(178, 175, 229, 1) 0%, rgba(69, 69, 74, 0.84) 19%, rgba(18, 14, 14, 0.88) 83%);
   color: white;
 }

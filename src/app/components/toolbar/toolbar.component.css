@@ -3,7 +3,6 @@ mat-toolbar {
   flex-direction: row;
   justify-content: start;
 
-
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -37,29 +36,9 @@ small {
   font-size: xx-small;
 }
 
-.top a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  padding: 5px;
-  border-radius: 15px;
-}
-
-.top a:hover {
-  cursor: pointer;
-  background-color: dimgrey;
-  transform: scale(1.1);
-}
-
 .bottom a:hover, a:visited, a:link, a:active {
   color: white;
   text-decoration: none;
-}
-
-.linkedin svg, .mail mat-icon{
-  transform: translateY(5px);
 }
 
 .gh-button img {

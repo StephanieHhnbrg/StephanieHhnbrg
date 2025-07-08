@@ -7,6 +7,16 @@
   color: white !important;
 }
 
+@media (max-width: 600px) {
+  h2 {
+    margin-left: 5px;
+  }
+
+  .sessions, .events {
+    margin-right: 10px;
+  }
+}
+
 .sessions, .events {
   margin-left: 10px;
 }

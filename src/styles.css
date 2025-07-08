@@ -5,6 +5,10 @@ html, body {
   background-color: black;
 }
 
+app-root {
+  width: 100vw;
+}
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 h2, h3, h4 {

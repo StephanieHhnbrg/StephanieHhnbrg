@@ -9,7 +9,7 @@
       <mat-chip-set>
         <mat-chip *ngFor="let topic of article.topics">{{topic}}</mat-chip>
       </mat-chip-set>
-      <div class="row">
+      <div class="card-body">
         <img mat-card-image class="banner-image" [src]="article.imageLink">
         <div>
           <span class="article-desc">{{article.description}}</span>
