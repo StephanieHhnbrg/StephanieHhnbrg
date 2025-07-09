@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {map, Observable} from "rxjs";
+import {map, Observable, ReplaySubject, Subscription} from "rxjs";
 import {BlogArticle} from "../data/blog-article.data";
 import {RssResponse} from "../data/rss-response.data";
 import {environment} from '../../environment/environment';
@@ -10,9 +10,23 @@ import {environment} from '../../environment/environment';
 })
 export class MediumService {
 
+  private data: BlogArticle[] = []
+  private fetchData$ = new ReplaySubject<BlogArticle[]>(1);
+
   constructor(private http: HttpClient) { }
 
-  public fetchBlogArticles(): Observable<BlogArticle[]> {
+  public triggerDataFetching(): Subscription {
+    return this.fetchBlogArticles().subscribe(response => {
+      this.data = response;
+      this.fetchData$.next(this.data);
+    });
+  }
+
+  public getDataObservable(): Observable<BlogArticle[]> {
+    return this.fetchData$.asObservable();
+  }
+
+  private fetchBlogArticles(): Observable<BlogArticle[]> {
     const endpoint = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${environment.mediumUsername}`
     const httpOptions = {
       headers: new HttpHeaders({

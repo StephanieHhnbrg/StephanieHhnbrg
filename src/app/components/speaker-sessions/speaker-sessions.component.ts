@@ -17,7 +17,7 @@ export class SpeakerSessionsComponent implements OnInit, OnDestroy{
   }
 
   ngOnInit() {
-    this.subscriptions.push(this.sessionizeService.fetchSessionizeData()
+    this.subscriptions.push(this.sessionizeService.getDataObservable()
       .subscribe(result => { this.data = result; }));
   }
 

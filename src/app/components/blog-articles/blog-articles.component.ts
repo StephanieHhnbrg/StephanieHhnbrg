@@ -16,7 +16,7 @@ export class BlogArticlesComponent implements OnInit, OnDestroy{
   }
 
   ngOnInit() {
-    this.subscriptions.push(this.mediumService.fetchBlogArticles()
+    this.subscriptions.push(this.mediumService.getDataObservable()
       .subscribe(result => { this.articles = result}));
 
   }

@@ -16,7 +16,7 @@ export class CertificationsComponent implements OnInit, OnDestroy{
   }
 
   ngOnInit() {
-    this.subscriptions.push(this.creedlyService.fetchCreedlyData()
+    this.subscriptions.push(this.creedlyService.getDataObservable()
       .subscribe(result => {
         this.badges = result;
       }));

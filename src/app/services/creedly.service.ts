@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {map, Observable} from "rxjs";
+import {map, Observable, ReplaySubject, Subscription} from "rxjs";
 import {environment} from '../../environment/environment';
 import {CreedlyResponse} from "../data/creedly-response.data";
 import {Badge} from "../data/badge.data";
@@ -10,9 +10,23 @@ import {Badge} from "../data/badge.data";
 })
 export class CreedlyService {
 
+  private data: Badge[] = [];
+  private fetchData$ = new ReplaySubject<Badge[]>(1);
+
   constructor(private http: HttpClient) { }
 
-  public fetchCreedlyData(): Observable<Badge[]> {
+  public triggerDataFetching(): Subscription {
+    return this.fetchCreedlyData().subscribe(response => {
+      this.data = response;
+      this.fetchData$.next(this.data);
+    });
+  }
+
+  public getDataObservable(): Observable<Badge[]> {
+    return this.fetchData$.asObservable();
+  }
+
+  private fetchCreedlyData(): Observable<Badge[]> {
     const encodedUrl = encodeURIComponent(`https://www.credly.com/users/${environment.credlyUserId}/badges.json`);
     const endpoint = `https://api.allorigins.win/get?url=${encodedUrl}`;
 
