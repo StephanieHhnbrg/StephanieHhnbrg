@@ -4,6 +4,7 @@ import {map, Observable, ReplaySubject, Subscription} from "rxjs";
 import {environment} from '../../environment/environment';
 import {CreedlyResponse} from "../data/creedly-response.data";
 import {Badge} from "../data/badge.data";
+import {JAVA_CERT} from "../data/java-cert.data";
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class CreedlyService {
 
   public triggerDataFetching(): Subscription {
     return this.fetchCreedlyData().subscribe(response => {
-      this.data = response;
+      this.data = [JAVA_CERT].concat(response);
       this.fetchData$.next(this.data);
     });
   }
@@ -43,7 +44,7 @@ export class CreedlyService {
       let skills = item.badge_template.skills.map(skill => skill.name);
       return {
         imageLink: item.image_url,
-        url: item.badge_template.url,
+        url: `https://www.credly.com/badges/${item.id}/public_url`,
         name: item.badge_template.name,
         date: item.issued_at_date,
         description: item.badge_template.description,

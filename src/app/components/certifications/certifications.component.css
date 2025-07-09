@@ -43,9 +43,13 @@ mat-card-header, mat-card-content {
   transform: translateY(-75px);
 }
 
-.accenture-banner {
+.transparent-banner {
   background-color: white;
   border-radius: 50% !important;
+}
+
+.uncropped-banner {
+  width: 300px;
 }
 
 @media (max-width: 600px) {

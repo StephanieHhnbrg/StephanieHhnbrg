@@ -1,5 +1,6 @@
 export interface CreedlyResponse {
     data: {
+      id: string,
       image_url: string,
       issued_at_date: string,
       issuer: {

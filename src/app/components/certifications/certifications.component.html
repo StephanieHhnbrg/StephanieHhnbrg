@@ -3,7 +3,8 @@
   <div class="row">
     <mat-card *ngFor="let badge of badges" appearance="outlined">
       <img mat-card-image class="banner-image" [src]="badge.imageLink"
-      [ngClass]="{'accenture-banner': badge.issuer === 'Accenture'}">
+      [ngClass]="{'transparent-banner': badge.date === '2024-06-24',
+                  'uncropped-banner': badge.date === '2023-10-13'}">
       <mat-card-header>
         <mat-card-title>{{badge.name}}</mat-card-title>
         <mat-card-subtitle><span class="date">{{badge.date}}</span><span>{{"CERTIFICATIONS.ISSUED_BY" | translate}} {{badge.issuer}}</span></mat-card-subtitle>
