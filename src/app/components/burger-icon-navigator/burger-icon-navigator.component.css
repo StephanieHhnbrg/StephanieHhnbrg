@@ -11,5 +11,14 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .active {
-  color: #B2AFE5;
+  background: #918cde;
+  background: linear-gradient(110deg, rgba(145, 140, 222, 1) 21%, rgba(65, 146, 204, 1) 40%, rgba(255, 255, 255, 1) 64%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+app-github-icon {
+  display: inline-block;
+  transform: translateY(5px);
 }

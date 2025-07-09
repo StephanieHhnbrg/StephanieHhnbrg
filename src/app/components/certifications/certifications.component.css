@@ -1,25 +1,3 @@
-@media (max-width: 600px) {
-  h2 {
-    margin-left: 5px;
-  }
-
-  mat-card {
-    min-width: 95vw;
-    max-width: 95vw;
-  }
-
-  .mat-mdc-card-subtitle {
-    width: 90vw;
-  }
-}
-
-@media (min-width: 600px) {
-  mat-card {
-    min-width: 500px;
-    max-width: 500px;
-  }
-}
-
 mat-card {
   margin: 95px 10px 10px;
   color: white;
@@ -35,6 +13,11 @@ mat-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.date {
+  white-space: nowrap;
+  margin-right: 10px;
 }
 
 .badge-desc {
@@ -63,4 +46,26 @@ mat-card-header, mat-card-content {
 .accenture-banner {
   background-color: white;
   border-radius: 50% !important;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    margin-left: 5px;
+  }
+
+  mat-card {
+    min-width: 95vw;
+    max-width: 95vw;
+  }
+
+  .mat-mdc-card-subtitle {
+    width: 85vw;
+  }
+}
+
+@media (min-width: 600px) {
+  mat-card {
+    min-width: 500px;
+    max-width: 500px;
+  }
 }

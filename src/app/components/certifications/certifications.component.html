@@ -6,7 +6,7 @@
       [ngClass]="{'accenture-banner': badge.issuer === 'Accenture'}">
       <mat-card-header>
         <mat-card-title>{{badge.name}}</mat-card-title>
-        <mat-card-subtitle><span>{{badge.date}}</span><span>{{"CERTIFICATIONS.ISSUED_BY" | translate}} {{badge.issuer}}</span></mat-card-subtitle>
+        <mat-card-subtitle><span class="date">{{badge.date}}</span><span>{{"CERTIFICATIONS.ISSUED_BY" | translate}} {{badge.issuer}}</span></mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         <mat-chip-set>
