@@ -31,5 +31,10 @@
     "SEE_BADGE": "Badge ansehen"
   },
   "TALKS.UPCOMING": "demnächst",
-  "CERTIFICATIONS.ISSUED_BY": "ausgestellt von"
+  "CERTIFICATIONS.ISSUED_BY": "ausgestellt von",
+  "CHAT": {
+    "INIT_MSSG": "\uD83D\uDC4B Hallo! Ich bin Stephanies virtueller Assistent. Frag mich alles über ihre Fähigkeiten, Erfahrungen oder aktuelle Projekte.",
+    "INPUT_PLACEHOLDER": "Stelle hier deine Frage.",
+    "UNAVAILABLE": "⚠️ Entschuldigung, ich bin gerade nicht verfügbar. Bitte versuch es später noch einmal. Bis dahin, Viel Spaß beim Entdecken der Webseite!"
+  }
 }

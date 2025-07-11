@@ -5,13 +5,14 @@
   <app-spline-animation></app-spline-animation>
 </ng-container>
 
-
-
 <div class="container">
-  <div *ngIf="isMobile">
-    <app-burger-icon-navigator></app-burger-icon-navigator>
+  <div class="row">
+    <app-burger-icon-navigator *ngIf="isMobile"></app-burger-icon-navigator>
+    <app-tab-navigator *ngIf="!isMobile"></app-tab-navigator>
+
+    <app-chat-button></app-chat-button>
   </div>
-  <app-tab-navigator *ngIf="!isMobile"></app-tab-navigator>
+
 
   <router-outlet></router-outlet>
 </div>

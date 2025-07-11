@@ -30,6 +30,13 @@ import {TabNavigatorComponent} from "./components/tab-navigator/tab-navigator.co
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {BurgerIconNavigatorComponent} from "./components/burger-icon-navigator/burger-icon-navigator.component";
 import {ContactButtonsComponent} from "./components/contact-buttons/contact-buttons.component";
+import {ChatComponent} from "./components/chat/chat.component";
+import {ChatButtonComponent} from "./components/chat-button/chat-button.component";
+import {MatBottomSheetModule} from "@angular/material/bottom-sheet";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {FormsModule} from "@angular/forms";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -48,6 +55,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     TabNavigatorComponent,
     BurgerIconNavigatorComponent,
     ContactButtonsComponent,
+    ChatComponent,
+    ChatButtonComponent,
     MonthYearPipe
   ],
   imports: [
@@ -63,7 +72,8 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     }),
     MatToolbarModule, MatButtonModule, MatIconModule, MatMenuModule, MatDialogModule,
-    MatCardModule, MatChipsModule, MatDividerModule, MatSnackBarModule
+    MatCardModule, MatChipsModule, MatDividerModule, MatSnackBarModule, MatBottomSheetModule,
+    MatFormFieldModule, MatInputModule, FormsModule, MatProgressSpinnerModule
   ],
   providers: [
     provideRouter(routes),

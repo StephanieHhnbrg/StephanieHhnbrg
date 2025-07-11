@@ -1,0 +1,24 @@
+<mat-icon class="close-icon" (click)="closeChat($event)">close</mat-icon>
+
+<div class="messages" #messageContainer>
+  <ng-container *ngFor="let message of chatMessages">
+    <div [ngClass]="{'user-message-frame': message.role == 'user'}">
+      <div [ngClass]="{'bot-message': message.role === 'bot', 'user-message': message.role == 'user'}">
+        {{message.text}}
+      </div>
+    </div>
+  </ng-container>
+  <div class="bot-message" *ngIf="isLoading">
+    <mat-spinner color="white" diameter="18"></mat-spinner>
+  </div>
+</div>
+
+<mat-form-field>
+  <input matInput type="text" placeholder='{{"CHAT.INPUT_PLACEHOLDER" | translate}}'
+         (keyup.enter)="sendMessage(input.value, input)" #input>
+  <button matSuffix mat-icon-button
+          [disabled]="isLoading"
+          (click)="sendMessage(input.value, input)">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</mat-form-field>
