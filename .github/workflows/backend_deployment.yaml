@@ -14,10 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     concurrency: deploy-group
     steps:
-      - uses: actions/checkout@v4
-      - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: |
+      - name: 🌿 Check out branch
+        uses: actions/checkout@v4
+
+      - name: 🕊️ Set up Fly CTL
+        uses: superfly/flyctl-actions/setup-flyctl@master
+
+      - name: 🚀 Deploy application
+        run: |
           cd backend
-          flyctl deploy --remote-only
+          flyctl deploy
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

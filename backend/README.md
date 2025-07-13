@@ -23,7 +23,7 @@ Create an account and generate an API key at https://console.groq.com/keys
 
 3. Run the application \
 Start the server with your Groq API key as an environment variable: \
-`GROQ_API_KEY=gsk_... uvicorn app.main:app --reload`
+`GROQ_API_KEY=gsk_... LOCAL_RUN=true uvicorn app.main:app --reload`
 
 
 4. Test the endpoint 

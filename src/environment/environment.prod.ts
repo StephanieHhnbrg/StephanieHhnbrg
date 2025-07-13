@@ -3,5 +3,5 @@ export const environment = {
   mediumUsername: "stephaniehohenberg",
   sessionizeId: "m90agvqtdd",
   splineId: "AxZheWuU4DZSXNUO",
-  chatEndpoint: "http://127.0.0.1:8000/ask"
+  chatEndpoint: "https://chatbot-portfolio.fly.dev/ask"
 };

@@ -3,13 +3,26 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://stephaniehhnbrg.github.io/StephanieHhnbrg/</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>yearly</changefreq>
     <image:image>
       <image:loc>https://stephaniehhnbrg.github.io/StephanieHhnbrg/assets/images/profile.jpg</image:loc>
       <image:caption>CV Picture</image:caption>
       <image:title>CV Picture</image:title>
     </image:image>
     <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://stephaniehhnbrg.github.io/StephanieHhnbrg/articles</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://stephaniehhnbrg.github.io/StephanieHhnbrg/talks</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+
+    <loc>https://stephaniehhnbrg.github.io/StephanieHhnbrg/certs</loc>
+    <priority>0.8</priority>
   </url>
 </urlset>

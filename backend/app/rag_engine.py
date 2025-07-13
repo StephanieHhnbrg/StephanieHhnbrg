@@ -4,7 +4,7 @@ import os
 import logging
 
 logging.basicConfig(level=logging.INFO)
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("all-mpnet-base-v2")
 client = chromadb.PersistentClient(path="chroma_db")
 # client = chromadb.Client()
 
