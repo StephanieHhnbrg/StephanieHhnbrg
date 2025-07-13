@@ -1,0 +1,21 @@
+EDUCATION
+list of universities where Stephanie Hohenberg studied:
+
+Free University, Berlin — Master in Computer Science
+OCTOBER 2018 – OCTOBER 2021
+- topic of the thesis: First steps towards a taxonomy of software engineering contexts
+- 2nd place at the Aalto IoT Hackathon IoThon 2019
+
+Universitat Politècnica de Catalunya, Barcelona — study abroad
+SEPTEMBER 2019 – JANUARY 2020
+- main focus: IT entrepreneurship and VAR
+
+Technical University, Dortmund — Bachelor in Computer Science
+OCTOBER 2013 – OCTOBER 2017
+- topic of thesis: support of the architecture analysis regarding the dependency management in gradle projects
+- PR management and event organization as volunteer in the student organization Erasmus Student Network (ESN) 2015 - 2017
+- 2nd place at the Accenture Digital Connected Hackathon 2016
+
+Universiteit Leiden, Netherlands — study abroad
+SEPTEMBER 2014 – JANUARY 2015
+- main focus: data science and computer graphics

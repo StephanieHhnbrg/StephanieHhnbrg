@@ -1,0 +1,32 @@
+WORK EXPERIENCE
+Workplaces and key projects shaping Stephanie Hohenberg’s professional experience
+
+Accenture GmbH, Berlin — Technology Consultant
+SEPTEMBER 2023– AUGUST 2024
+- Backend Development and DevOps of a Chatbot at the German Federal Employment Agency
+- Various Tool migrations from Bitbucket to Github, Jenkins to Github Actions, Kibana to Grafana, AWS to client-hosted platform with Kubeflow
+- Setting up various projects, including the backend for a CMS, a reporting dashboard and AKHQ dashboard
+
+Capgemini GmbH, Berlin — Senior Software Engineer
+MARCH 2023–AUGUST 2023
+- Backend Development at a Legacy Project of a German Premium Car Manufacturer
+- Testing and Maintenance of the Client Server project by using Java REST API Integration in the frontend and backend
+
+Netlight GmbH, Berlin — Associate Consultant
+October 2021 - SEPTEMBER 2022
+- Backend Development of the Core-Banking Module for an European Neo Banking Application
+- Technical connection of banking partners by using Kotlin Successful Migration of client accounts from one bank to another Planning and Integration of features
+
+adesso SE, Dortmund, Berlin, Barcelona — student developer
+October 2016 - APRIL 2021
+Fullstack Development of a Responsive Online Platform for members of a German Music Rights Organization
+- Design and Development of several services by using Angular and Java
+- Implementation of interactive data visualization elements, like tables, maps and graphs
+- Design and Execution of Usability Tests
+- Improvement of the UX in the corresponding BackOffice system
+
+- Modernization of a Swiss Information System for arranging employments Collaboration within an international team (Spain, Swiss, Bulgaria) Implementation of Features and Masks by using Angular
+
+Materna GmbH, Dortmund — student developer
+FEBRUARY 2015 - JUNE 2016
+- Development of features for a GUI-based explorer tool using DPWS (Devices Profile for Web-Services) in Java based environments for service-oriented communication between devices with limited resources

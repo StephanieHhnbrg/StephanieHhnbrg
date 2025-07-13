@@ -1,0 +1,72 @@
+CERTIFICATIONS
+certifications and badges earned by Stephanie Hohenberg
+
+name: Oracle Certified Professional: Java SE 17 Developer
+issuer: Oracle
+date: 2023-10-13
+topics: Java 17, Java Application Development, Java New Features
+description: An Oracle Certified Professional: Java SE 17 Developer has demonstrated proficiency in Java (Standard Edition) software development recognized by a wide range of world-wide industries. They have also exhibited thorough and broad knowledge of the Java programming language, coding practices, and utilization of new features incorporated into Java SE 17. By passing the required exam, a certified individual proves tremendous fluency in Java SE and the acquisition of the valuable professional skills required to be a Java software developer.
+
+
+name: Technology Architect Associate Certificate
+issuer: Accenture
+date: 2024-06-24
+topics: Technology Innovation, Technology Architectures, Architectu
+description: Accenture’s Technology Architects lead innovation, delivering cutting-edge solutions. The Technology Architect Associate professional certificate is the entry level of the 4-tiered certification program, obtained by people who started having architecture experience and the ambition of having a career in Architecture. They contribute to simple or complex tech projects, discuss issues with leads and client architects, and contribute to thought leadership for innovation at Accenture.
+
+
+name: AWS Certified AI Practitioner
+issuer: Amazon Web Services Training and Certification
+date: 2025-02-11
+topics: AWS, Amazon Web Services, Machine Learning, AI and ML on AWS, Foundation Models, Generative AI, Artificial Intelligence, AWS Cloud
+description: Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. They can determine the correct types of AI/ML technologies to apply to specific use cases and know how to use AI, ML, and generative AI technologies responsibly. They are familiar with the AWS Global Infrastructure, core AWS services and use cases, AWS service pricing models, and the AWS shared responsibility model for security and compliance in the AWS Cloud.
+
+
+name: AWS Certified Cloud Practitioner
+issuer: Amazon Web Services Training and Certification
+date: 2023-03-16
+topics: AWS, Amazon Web Services, Cloud Computing, Cloud Services, Cloud Platform
+description: Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.
+
+
+name: LFC131: Green Software for Practitioners
+issuer: The Linux Foundation
+date: 2023-09-15
+topics: green software development, carbon awareness, carbon reduction, energy efficiency, sustainable software
+description: Earners of the LFC131: Green Software for Practitioners badge understand the principles of green software and know how to apply green software principles to the design and development of their software applications. They have a good understanding of the shared language and standardized terms related to green software. They acknowledge the importance of measurement and are aware of the different climate commitments which constitute the mechanism of carbon reduction.
+
+
+name: LFS144: Introduction to Istio
+issuer: The Linux Foundation
+date: 2025-06-06
+topics: Kubernetes, istio, Service Mesh, Envoy, Grafana, Prometheus, Kiali, Jaeger
+description: Earners of the LFS144: Introduction to Istio badge can deploy and manage service meshes, with a focus on Istio. They learn to configure environments for seamless application integration, manage traffic effectively, and enhance system observability and security. Recipients also understand workload identity and the potential of WebAssembly for extending service mesh functionality. They can install Istio on Kubernetes, configure ingress, monitor services, and manage traffic routing.
+
+
+name: LFS169: Introduction to GitOps
+issuer: The Linux Foundation
+date: 2023-09-18
+topics: deployment automation, continuous delivery, GitOps, ArgoCD, Jenkins, Flux
+description: Earners of the LFS169: Introduction to GitOp badge can explain what GitOps is, along with its key principles, practices and technologies within the context of setting up Continuous Delivery on Kubernetes. They understand the two reconciliation models and three main tools used to implement GitOps on Kubernetes. They understand the benefits of GitOps: how to set up infrastructure, roll out applications and recover from a disaster, all using developer-friendly git-based workflows.
+
+
+name: AWS Partner: Technical Accredited
+issuer: Amazon Web Services Training and Certification
+date: 2024-08-13
+topics: Amazon Web Services, AWS Cloud, AWS Cloud Computing
+description: Earners of this badge are AWS Partners who have developed fundamental, technical knowledge of AWS cloud computing, global infrastructure, services, solutions, migration and security.
+
+
+name: AWS Partner: Generative AI Essentials
+issuer: Amazon Web Services Training and Certification
+date: 2023-11-14
+topics: Amazon Web Services, AWS Cloud, AWS Cloud Computing, AI and ML on AWS
+description: Earners of this badge are individuals at AWS Partners or Amazon employees who have demonstrated a foundational knowledge of AWS Generative AI Essentials Business Skill
+
+
+name: Professional Scrum Master™ I (PSM I)
+issuer: Scrum.org
+date: 2023-03-23
+topics: PSM, Agile, Scrum, Scrum Master
+description: Those who earn the globally recognized Professional Scrum Master I (PSM I) certification have demonstrated a fundamental level of Scrum mastery, including the concepts of applying Scrum, and proven an understanding of Scrum as described in the Scrum Guide. This individual has also demonstrated a consistent use of terminology and approach to Scrum.
+

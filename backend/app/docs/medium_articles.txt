@@ -1,0 +1,22 @@
+MEDIUM ARTICLES
+written by Stephanie Hohenberg
+
+
+title: How I dynamically embedded Credly Badges in My Angular Portfolio (No API Key Needed)
+topics: portfolio, Angular, credly, web development
+desc: Keeping a portfolio up to date is important. Let’s explore a dynamic solution that auto-updates your page, when you earn a new Credly badge.
+
+
+title: Shipping Docker Containers with confidence: GHCR + Kubernetes + GitHub Actions
+topics: docker, devops, github actions, github container registry, continuous delivery
+desc: Whether you’re developing a quick prototype or managing a production-grade workload, GitHub Container Registry (GHCR) offers a secure and developer-friendly way to host your Docker images.
+
+
+title: A Guide to Kubernetes Deployment Strategies and Traffic Management
+topics: istio, traffic management, deployment, kubernetes
+desc: In this article, we’ll break down the five most common Kubernetes deployment strategies, why they matter, and when to use each one.
+
+
+title: Build. Deploy. Generate. An End-to-End GCP + AI Setup
+topics: gemini, google cloud run, prototyping, google firestore, cors
+desc: Build a lightweight, serverless AI backend with Python, GCloud Run, Firestore & Gemini, perfect for MVPs and rapid prototyping.

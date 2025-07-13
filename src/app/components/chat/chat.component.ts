@@ -30,7 +30,8 @@ export class ChatComponent implements OnInit, OnDestroy, AfterViewInit {
       && this.chatMessages.at(this.chatMessages.length-1)
       && this.chatMessages.at(this.chatMessages.length-1)!.role == 'user') {
       this.isLoading = true;
-      this.chatService.getResponseForUserMessage(this.chatMessages.at(this.chatMessages.length-1)!.text);
+      let text = this.chatMessages.at(this.chatMessages.length-1)!.text;
+      this.subscriptions.push(this.chatService.getResponseForUserMessage(text));
     }
     this.subscriptions.push(this.chatService.getBotMssgReceivedObservable().subscribe(mssg => {
       this.chatMessages.push(mssg);
@@ -52,7 +53,7 @@ export class ChatComponent implements OnInit, OnDestroy, AfterViewInit {
       return;
     }
     this.chatMessages.push({ role: 'user', text });
-    this.chatService.getResponseForUserMessage(text);
+    this.subscriptions.push(this.chatService.getResponseForUserMessage(text));
     input.value= "";
     this.isLoading = true;
     input.blur();

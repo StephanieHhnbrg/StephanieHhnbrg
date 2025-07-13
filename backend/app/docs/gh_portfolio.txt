@@ -1,0 +1,62 @@
+GITHUB PROJECTS
+personal programming projects of Stephanie Hohenberg
+
+name: StephanieHhnbrg
+tech stack: Angular, Python, RAG, Chatbot
+desc: Animated Portfolio website to showcase experiences, skills and certificates
+
+
+name: kcd-demo
+tech stack: kubernetes, helm, kustomize, ghcr, docker
+desc: K8 deployment strategies demos for the Kubernetes Community Days
+
+
+name: breakout-barhoppers
+tech stack: Angular, Python, GCloud Run, GCloud Firestore, Solana
+desc: Solana-based application gamifying the barhopping experience with tokens and NFTs - Contribution to the Hackathon "Breakout Challenge"
+
+
+name: ai-hackfest-marketeer
+tech stack: Angular, Python, GCloud Run, GCloud Firestore, Gemini
+desc: Marketing platform for A/B testing of mail campaigns - Contribution to the Hackathon "AI Hackfest 2025"
+
+
+name: chinese-caligraphy
+tech stack: Angular
+desc: Platform to study and explore the Chinese language
+
+
+name: EquiSense
+tech stack: Angular, ChatGPT, Gemini
+desc: Platform to compare GenAI responses on different criteria
+
+
+name: manifest-wizard
+tech stack: Angular, Impact Framework
+desc: Contribution to the annual Green Software Foundation Hackathon "CarbonHack24"
+
+
+name: comRAT-C
+tech stack: Angular
+desc: comRAT-C is a test to evaluate creativity by the ability of finding a fourth word which is a compound word with 3 given words.
+
+
+name: FluffyHounder
+tech stack: Angular
+desc: Application to find lost pets quicker for the Hackathon iothon at Aalto University
+
+
+name: PacMetro
+tech stack: Angular
+desc: PacMetro is a game to get to know the metrosystem of Berlin in a playful way
+
+
+name: TSEK-Analyzer
+tech stack: Angular
+desc: platform to analyze papers published at the International Conference on Software Engineering (ICSE) 2020 and to visualize a taxonomy of software engineering contexts
+
+
+name: Dependency Story
+tech stack: Angular
+desc: Plugin to extract data about project dependencies + Tool to visualize this data
+

@@ -1,0 +1,30 @@
+TECH TALKS
+held by Stephanie Hohenberg
+
+{
+  "speaker": {
+    "firstName": "Stephanie",
+    "lastName": "Hohenberg",
+    "tagline": "Fullstack Engineer | K8 enthusiast | Remote 🌍",
+    "bio": "Stephanie is a passionate advocate for DevOps and cloud technologies. Her coding journey began in her teenage years, and she has since developed a love for working on exciting projects in languages such as Angular, Java, and more. With a diverse background in IT consultancies, agile teams, and cross-domain experiences, she has developed her skills across various industries. Currently, Stephanie is taking a gap year to focus on passion projects, pursue certifications, and actively engage with the Kubernetes community in Central America."
+  },
+  "sessions": [
+    {
+      "title": "Zero Downtime, Zero Worries: Kubernetes 🚀 Deployment Strategies and 🚦 Traffic Management",
+      "description": "Kubernetes deployments don’t have to be a gamble! 🎲 Say goodbye to risky updates and hello to seamless, zero-downtime rollouts. In this talk, we’ll dive into the magic of canary and blue-green deployments, showing how different technologies can work together to make your CI/CD pipeline smarter, faster, and more reliable.\r\n\r\nExpect live demos, best practices, and battle-tested strategies to help you deploy with confidence. Whether you’re aiming for safer rollouts or just want to level up your DevOps game, this session is your ticket to smoother Kubernetes deployments! 🚢✨",
+      "language": "English"
+    }
+  ],
+  "events": [
+    {
+      "name": "KCD Colombia Bogota 2025",
+      "eventDate": "2025-08-28",
+      "location": "Bogotá, Colombia"
+    },
+    {
+      "name": "KCD Antigua Guatemala 2025",
+      "eventDate": "2025-06-14"
+      "location": "Antigua Guatemala, Guatemala"
+    }
+  ]
+}

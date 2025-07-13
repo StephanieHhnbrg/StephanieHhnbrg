@@ -1,4 +1,4 @@
-name: deployment
+name: frontend deployment
 
 on:
   workflow_dispatch:
@@ -8,6 +8,7 @@ on:
     paths-ignore:
       - 'dist/**'
       - 'docs/**'
+      - 'backend/**'
 
 jobs:
   build:

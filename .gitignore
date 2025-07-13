@@ -11,6 +11,10 @@
 npm-debug.log
 yarn-error.log
 
+# Venv
+/backend/venv
+/backend/chroma_db
+
 # IDEs and editors
 .idea/
 .project
@@ -40,3 +44,4 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
