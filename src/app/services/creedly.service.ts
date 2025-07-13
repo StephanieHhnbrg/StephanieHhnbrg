@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {map, Observable, ReplaySubject, Subscription} from "rxjs";
-import {environment} from '../../environment/environment';
+import {environment} from '../../environments/environment';
 import {CreedlyResponse} from "../data/creedly-response.data";
 import {Badge} from "../data/badge.data";
 import {JAVA_CERT} from "../data/java-cert.data";

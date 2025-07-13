@@ -5,7 +5,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {TranslateService} from "@ngx-translate/core";
 import {firstValueFrom, Subscription} from "rxjs";
 import {CV_LINKS} from "../../ links.data";
-import {environment} from '../../../environment/environment';
+import {environment} from '../../../environments/environment';
 
 @Component({
   selector: 'app-spline-animation',

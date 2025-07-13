@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Observable, Subject, Subscription} from "rxjs";
 import {TranslateService} from "@ngx-translate/core";
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {environment} from "../../environment/environment";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -37,7 +37,7 @@ export class ChatService {
       next: (response) => {
         this.botMssgReceived$.next({role: 'bot', text: response.answer});
       },
-      error: (error) => {
+      error: () => {
         let text = this.translate.instant("CHAT.UNAVAILABLE");
         this.botMssgReceived$.next({role: 'bot', text});
       }
