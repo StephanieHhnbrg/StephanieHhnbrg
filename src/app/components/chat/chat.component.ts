@@ -36,7 +36,7 @@ export class ChatComponent implements OnInit, OnDestroy, AfterViewInit {
     this.subscriptions.push(this.chatService.getBotMssgReceivedObservable().subscribe(mssg => {
       this.chatMessages.push(mssg);
       this.isLoading = false;
-      this.scrollToBottom();
+      setTimeout(() => { this.scrollToBottom(); }, 300 );
     }));
   }
 
@@ -57,7 +57,7 @@ export class ChatComponent implements OnInit, OnDestroy, AfterViewInit {
     input.value= "";
     this.isLoading = true;
     input.blur();
-    this.scrollToBottom();
+    setTimeout(() => { this.scrollToBottom(); }, 300 );
   }
 
   public closeChat(event: MouseEvent): void {

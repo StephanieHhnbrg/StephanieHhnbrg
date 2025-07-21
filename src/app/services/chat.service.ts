@@ -37,8 +37,12 @@ export class ChatService {
       next: (response) => {
         this.botMssgReceived$.next({role: 'bot', text: response.answer});
       },
-      error: () => {
+      error: (err: { error: {detail: string}}) => {
         let text = this.translate.instant("CHAT.UNAVAILABLE");
+        if (err.error.detail.toLowerCase().includes("rate limit reached")) {
+          text = this.translate.instant("CHAT.TOKEN_LIMITED");
+        }
+
         this.botMssgReceived$.next({role: 'bot', text});
       }
     });

@@ -35,6 +35,7 @@
   "CHAT": {
     "INIT_MSSG": "\uD83D\uDC4B Hi there! I'm Stephanie's virtual assistant. Ask me anything about her skills, experience, or recent projects.",
     "INPUT_PLACEHOLDER": "Type your question here",
-    "UNAVAILABLE": "⚠️ Apologies, I’m currently unavailable. Please try again later. Until then, feel free to browse this site in the meantime."
+    "UNAVAILABLE": "⚠️ Apologies, I’m currently unavailable. Please try again later. Until then, feel free to browse this site in the meantime.",
+    "TOKEN_LIMITED": "⚠️ Sorry, we have reached the token limit for this minute. Please try again shortly."
   }
 }

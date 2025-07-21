@@ -16,6 +16,7 @@ import {SessionizeService} from "./services/sessionize.service";
 export class AppComponent implements OnInit, OnDestroy {
 
   public isMobile = false;
+  public isSafari = false;
   private hasOpenedSnackbar = false;
   private subscriptions: Subscription[] = [];
 
@@ -34,12 +35,20 @@ export class AppComponent implements OnInit, OnDestroy {
     this.subscriptions.push(this.sessionizeService.triggerDataFetching());
     this.subscriptions.push(this.creedlyService.triggerDataFetching());
 
+    this.isSafari = /^((?!chrome|android).)*safari/i.test(window.navigator.userAgent);
+    if (this.isSafari) {
+      this.hasOpenedSnackbar = true; // spline animation is not displayed in Safari and hint should not be shown.
+    }
     this.subscriptions.push(this.breakpointObserver.observe([Breakpoints.Handset])
       .subscribe(result => {
         this.isMobile = result.matches;
         if (!this.isMobile && !this.hasOpenedSnackbar) {
-          this.snackbar.open("Check out the computer to see my CV!", '💻',
-            { duration: 7 * 1000});
+          setTimeout(() => {
+            this.snackbar.open("Check out the computer to see my CV!", '💻',
+              { duration: 7 * 1000});
+          }, 2000 );
+
+
           this.hasOpenedSnackbar = true;
         }
       }));

@@ -35,6 +35,7 @@
   "CHAT": {
     "INIT_MSSG": "\uD83D\uDC4B Hallo! Ich bin Stephanies virtueller Assistent. Frag mich alles über ihre Fähigkeiten, Erfahrungen oder aktuelle Projekte.",
     "INPUT_PLACEHOLDER": "Stelle hier deine Frage.",
-    "UNAVAILABLE": "⚠️ Entschuldigung, ich bin gerade nicht verfügbar. Bitte versuch es später noch einmal. Bis dahin, Viel Spaß beim Entdecken der Webseite!"
+    "UNAVAILABLE": "⚠️ Entschuldigung, ich bin gerade nicht verfügbar. Bitte versuch es später noch einmal. Bis dahin, Viel Spaß beim Entdecken der Webseite!",
+    "TOKEN_LIMIT": "⚠️ Entschuldigung, das Token-Limit pro Minute wurde erreicht. Bitte versuche es in Kürze erneut."
   }
 }

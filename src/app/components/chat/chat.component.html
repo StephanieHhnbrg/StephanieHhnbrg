@@ -4,7 +4,7 @@
   <ng-container *ngFor="let message of chatMessages">
     <div [ngClass]="{'user-message-frame': message.role == 'user'}">
       <div [ngClass]="{'bot-message': message.role === 'bot', 'user-message': message.role == 'user'}">
-        {{message.text}}
+        <span innerHTML="{{message.text}}"></span>
       </div>
     </div>
   </ng-container>

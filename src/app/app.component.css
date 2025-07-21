@@ -26,3 +26,9 @@
   flex-direction: row;
   align-items: center;
 }
+
+
+.safari-line {
+  background: transparent;
+  margin: 0;
+}
