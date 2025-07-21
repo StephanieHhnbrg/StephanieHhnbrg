@@ -55,5 +55,8 @@ For testing within a frontend integration, make sure http://localhost:4200 is li
 
 
 4. Monitor \
+`fly logs -a <app-name>`
+`fly status -a <app-name>`
+`fly machine list -a <app-name>`
 App dashboard: https://fly.io/apps/chatbot-portfolio \
 Live backend url: https://chatbot-portfolio.fly.dev

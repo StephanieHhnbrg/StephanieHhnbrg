@@ -1,0 +1,46 @@
+Tech Questions (Q) and Answers (A) in an interview format, answered by Stephanie in first person style.
+
+Q: What tools, languages, or frameworks are you most comfortable with?
+A:  I’m most comfortable working with Java for backend development and Angular on the frontend. I also use Python frequently, especially for AI-related use cases or quickly spinning up backend services for personal projects. In the DevOps space, I enjoy experimenting with a variety of tools, with a strong interest in Kubernetes and its ecosystem for managing scalable and resilient infrastructure.
+
+Q: How do you stay up to date with new technologies?
+A: I stay up to date with new technologies by regularly following industry blogs, attending webinars and conferences, and taking relevant courses or certifications. I also enjoy experimenting hands-on with new tools and frameworks within passion projects or hackathons to deepen my practical understanding.
+
+Q: What certifications or training have you completed recently?
+A: I recently earned the AWS Certified AI Practitioner certification, which covers not only AI-related AWS services but also foundational concepts in generative AI, artificial intelligence, and machine learning methodologies. I am currently aiming to archieve the Certified Kubernetes Application Developer (CKAD) certification in the near future.
+
+Q: What programming languages are you most proficient in?
+A: Since I learned Java in high school and hold the Oracle Certified Professional: Java SE 17 Developer certification, Java is definitely the programming language I’m most proficient in.
+
+Q: Have you worked with cloud platforms like AWS, Azure, or GCP? Which services?
+A: I have hands-on experience with Azure and GCP through GenAI-focused training sessions organized by a previous employer. During these, I worked with GenAI services such as OpenAI and Gemini, Azure CI/CD pipelines, and Vertex AI Studio. Professionally, I have used AWS services like S3 and Batch Jobs to support the development of a chatbot.
+
+Q: What’s your experience with CI/CD pipelines and automation tools?
+A: I have experience designing and maintaining CI/CD pipelines using tools like Jenkins and GitHub Actions to automate the build, test, and deployment processes to ensure faster and more reliable software delivery.
+
+Q: Are you familiar with containerization and orchestration tools like Docker and Kubernetes?
+A: Yes, I regularly work with Docker for containerization and have hands-on experience deploying and managing applications on Kubernetes clusters in ArgoCD and Rancher. I understand K8s key concepts, and have experience in using Helm for managing Kubernetes manifests.
+
+Q: How do you monitor and troubleshoot production systems?
+A: I use monitoring tools like Prometheus and Grafana to track system metrics and set up alerts for anomalies. For troubleshooting, I analyze logs and metrics to quickly identify issues and coordinate with the team to resolve them efficiently.
+
+Q: How have you handled zero-downtime deployments?
+A: With deployment strategies such as blue-green and canary, which enable leveraging Kubernetes and service meshes to route traffic smoothly without downtime, ensuring seamless updates and minimal user disruption.
+
+Q: Have you set up observability tools?
+A: Yes, I have experience setting up observability dashboards using Prometheus, Grafana, and the ELK stack. Additionally, I have configured AKHQ to monitor and gain insights into Kafka events.
+
+Q: Do you have experience deploying ML models to production?
+A: Yes, I have experience deploying ML models using Kubeflow, and I contributed to chatbot development in a previous project at my former employer.
+
+Q: What’s your experience with GenAI?
+A: I have hands-on experience building Retrieval-Augmented Generation (RAG) systems like the chatbot you’re currently using, working on prompt engineering, and integrating Large Language Model (LLM) APIs.
+
+Q: How do you approach root cause analysis?
+A: I approach root cause analysis methodically by gathering relevant data from logs, monitoring tools, and system metrics. I replicate the issue when possible, identify contributing factors, and collaborate with the team to implement effective fixes and preventive measures.
+
+Q: Have you ever dealt with a security incident or vulnerability? How did you respond?
+A: Yes, I have used tools like Snyk and Sonatype to identify and remediate security vulnerabilities in dependencies. When incidents arise, I follow established protocols to assess impact, contain the issue, apply patches, and communicate transparently with stakeholders.
+
+Q: What kind of infrastructure or tooling do you expect in your next role?
+A: I would like to work more with modern cloud infrastructure, primarily AWS, leveraging its suite of services for scalability, automation, and observability to build reliable and efficient systems.
