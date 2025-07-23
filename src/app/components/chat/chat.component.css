@@ -62,6 +62,10 @@
   padding-bottom: 2px;
 }
 
+.loader {
+  padding: 10px;
+}
+
 .user-message {
   margin: 2px;
   width: auto;

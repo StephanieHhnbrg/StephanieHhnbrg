@@ -35,7 +35,11 @@ export class ChatService {
     };
     return this.http.post<{ answer: string }>(endpoint, JSON.stringify({question}), httpOptions).subscribe({
       next: (response) => {
-        this.botMssgReceived$.next({role: 'bot', text: response.answer});
+        let text = response.answer.trim();
+        if (!text.startsWith('<p>')) {
+          text = `<p>${text}</p>`;
+        }
+        this.botMssgReceived$.next({role: 'bot', text});
       },
       error: (err) => {
         console.log(err);
