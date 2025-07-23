@@ -9,8 +9,8 @@ import {environment} from "../../environments/environment";
 })
 export class ChatService {
 
-  private chatMessages: { role: 'bot'|'user', text: string }[] = [];
-  private botMssgReceived$ = new Subject<{ role: 'bot'|'user', text: string }>();
+  private chatMessages: { role: 'bot'|'user', text: string, failed?: boolean }[] = [];
+  private botMssgReceived$ = new Subject<{ role: 'bot', text: string }>();
 
   constructor(private http: HttpClient,
               private translate: TranslateService) {
@@ -18,11 +18,11 @@ export class ChatService {
     this.chatMessages.push({ role: 'bot', text });
   }
 
-  public getMessages(): { role: 'bot'|'user', text: string }[] {
+  public getMessages(): { role: 'bot'|'user', text: string, failed?: boolean  }[] {
     return this.chatMessages;
   }
 
-  public getBotMssgReceivedObservable(): Observable<{ role: 'bot'|'user', text: string }> {
+  public getBotMssgReceivedObservable(): Observable<{ role: 'bot', text: string }> {
     return this.botMssgReceived$.asObservable();
   }
 
@@ -37,9 +37,15 @@ export class ChatService {
       next: (response) => {
         this.botMssgReceived$.next({role: 'bot', text: response.answer});
       },
-      error: (err: { error: {detail: string}}) => {
+      error: (err) => {
+        console.log(err);
+        let messages = this.chatMessages.filter(mssg => mssg.text == question);
+        if (messages.length > 0) {
+          messages[messages.length -1].failed = true;
+        }
+
         let text = this.translate.instant("CHAT.UNAVAILABLE");
-        if (err.error.detail.toLowerCase().includes("rate limit reached")) {
+        if (err.error && err.error.detail && err.error.detail.toLowerCase().includes("rate limit reached")) {
           text = this.translate.instant("CHAT.TOKEN_LIMITED");
         }
 

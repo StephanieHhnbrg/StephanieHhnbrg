@@ -33,9 +33,9 @@
   "TALKS.UPCOMING": "upcoming",
   "CERTIFICATIONS.ISSUED_BY": "issued by",
   "CHAT": {
-    "INIT_MSSG": "\uD83D\uDC4B Hi there! I'm Stephanie's virtual assistant. Ask me anything about her skills, experience, or recent projects.",
+    "INIT_MSSG": "<p>\uD83D\uDC4B Hi there! I'm Stephanie's virtual assistant. Ask me anything about her skills, experience, or recent projects.</p>",
     "INPUT_PLACEHOLDER": "Type your question here",
-    "UNAVAILABLE": "⚠️ Apologies, I’m currently unavailable. Please try again later. Until then, feel free to browse this site in the meantime.",
-    "TOKEN_LIMITED": "⚠️ Sorry, we have reached the token limit for this minute. Please try again shortly."
+    "UNAVAILABLE": "<p>⚠️ Apologies, I’m currently unavailable. Please try again later. Until then, feel free to browse this site in the meantime.</p>",
+    "TOKEN_LIMITED": "<p>⚠️ Sorry, we have reached the token limit for this minute. Please try again shortly.</p>"
   }
 }

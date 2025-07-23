@@ -13,7 +13,7 @@ export class ChatComponent implements OnInit, OnDestroy, AfterViewInit {
 
   @ViewChild('messageContainer') private messageContainer!: ElementRef;
 
-  public chatMessages: { role: 'bot'|'user', text: string }[] = [];
+  public chatMessages: { role: 'bot'|'user', text: string, failed?: boolean }[] = [];
   public isLoading = false;
 
   private _bottomSheetRef =
