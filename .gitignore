@@ -12,8 +12,9 @@ npm-debug.log
 yarn-error.log
 
 # Venv
-/backend/venv
-/backend/chroma_db
+/backend/fly/venv
+/backend/fly/chroma_db
+/backend/gcloudrun/venv
 
 # IDEs and editors
 .idea/

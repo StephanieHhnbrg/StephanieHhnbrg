@@ -11,7 +11,7 @@ client = chromadb.PersistentClient(path="chroma_db")
 collection = client.get_or_create_collection("docs")
 # client.delete_collection("docs")
 
-def load_documents_from_folder(folder_path="app/docs"):
+def load_documents_from_folder(folder_path="../docs"):
   documents = []
   for filename in os.listdir(folder_path):
     if filename.endswith(".txt"):
