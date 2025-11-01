@@ -4,5 +4,5 @@ export const environment = {
   sessionizeId: "m90agvqtdd",
   splineId: "AxZheWuU4DZSXNUO",
   chatEndpoint: "https://chatbot-atmljzwjra-ew.a.run.app/ask",
-  featureFlag_chatbotEnabled: "FEATURE_FLAG_CHATBOT_ENABLED",
+  featureFlag_chatbotEnabled: true,
 };
