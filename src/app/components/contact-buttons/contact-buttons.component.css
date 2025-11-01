@@ -1,9 +1,0 @@
-.linkedin svg, mat-icon{
-  transform: translateY(5px);
-}
-
-a:hover, a:visited, a:link, a:active {
-  color: white;
-  text-decoration: none;
-}
-

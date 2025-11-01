@@ -1,4 +1,0 @@
-# flyctl launch added from venv/lib/python3.9/site-packages/chromadb/proto/.gitignore
-venv/lib/python3.9/site-packages/chromadb/proto/**/*_pb2.py*
-venv/lib/python3.9/site-packages/chromadb/proto/**/*_pb2_grpc.py
-fly.toml

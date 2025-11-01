@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /sitemap.xml
-Sitemap: https://stephaniehhnbrg.github.io/StephanieHhnbrg/sitemap.xml
