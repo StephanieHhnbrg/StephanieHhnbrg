@@ -1,3 +1,6 @@
-<button mat-icon-button (click)="openChat()">
-  <mat-icon fontIcon="chat"></mat-icon>
-</button>
+<ng-container *ngIf="isChatEnabled">
+  <button mat-icon-button (click)="openChat()">
+    <mat-icon fontIcon="chat"></mat-icon>
+  </button>
+</ng-container>
+
