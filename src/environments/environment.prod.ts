@@ -3,5 +3,6 @@ export const environment = {
   mediumUsername: "stephaniehohenberg",
   sessionizeId: "m90agvqtdd",
   splineId: "AxZheWuU4DZSXNUO",
-  chatEndpoint: "https://chatbot-atmljzwjra-ew.a.run.app/ask"
+  chatEndpoint: "https://chatbot-atmljzwjra-ew.a.run.app/ask",
+  featureFlag_chatbotEnabled: "FEATURE_FLAG_CHATBOT_ENABLED",
 };
