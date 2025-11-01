@@ -29,12 +29,19 @@ Start the server with your Groq API key as an environment variable: \
 4. Test the endpoint 
 - Use curl to test from the command line:
 ``` 
-  curl -X POST http://127.0.0.1:8000/ask \
+  curl -X POST https://chatbot-atmljzwjra-ew.a.run.app/ask \
     -H "Content-Type: application/json" \
-    -d '{"question": "What is Stephanie's latest certification?"}'
+    -d '{"question": "What is Stephanies latest certification?"}'
 ```
 
 For testing within a frontend integration, make sure http://localhost:4200 is listed in `allow_origins in [main.py](./app/main.py) to avoid CORS exceptions.
 
 
 ## Deploying to GCloudRun
+1. Go to the Gcloud Run function and create a function
+2. Edit the source
+- Update the entry point to 'ask'
+- Upload the files: main.py, requirement.txt and all sub scripts contained in the application folder
+3. Test the endpoint via the curl command above
+- URL: https:// chatbot-<endpoint-id>-ew.a.run.app/ask
+4. Update the endpoint url in the [frontend](./../../src/environments/environment.prod.ts)
