@@ -1,2 +1,0 @@
-FeatureFlag featureFlag_animationEnabled updated to false
-FeatureFlag featureFlag_chatbotEnabled updated to true
