@@ -4,5 +4,6 @@ export const environment = {
   sessionizeId: "m90agvqtdd",
   splineId: "AxZheWuU4DZSXNUO",
   chatEndpoint: "http://127.0.0.1:8000/ask",
-  featureFlag_chatbotEnabled: true
+  featureFlag_animationEnabled: true,
+  featureFlag_chatbotEnabled: true,
 };

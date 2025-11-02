@@ -1,11 +1,11 @@
-<ng-container *ngIf="!isMobile && !isSafari">
+<ng-container *ngIf="!isMobile">
   <div  class="toolbar">
     <app-toolbar></app-toolbar>
   </div>
-  <app-spline-animation></app-spline-animation>
+  <app-spline-animation *ngIf="isAnimationEnabled"></app-spline-animation>
 </ng-container>
 
-<p *ngIf="isSafari" class="safari-line">&nbsp;</p> <!-- TODO build a better intro for safari and phone-->
+<p *ngIf="!isAnimationEnabled" class="empty-line">&nbsp;</p>
 
 <div class="container">
   <div class="row">

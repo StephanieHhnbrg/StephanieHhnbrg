@@ -1,7 +1,7 @@
 import {Component, inject} from '@angular/core';
 import {ChatComponent} from "../chat/chat.component";
 import {MatBottomSheet} from "@angular/material/bottom-sheet";
-import {environment} from "../../../environments/environment";
+import {FeatureFlagService} from "../../services/feature-flag.service";
 
 @Component({
   selector: 'app-chat-button',
@@ -10,8 +10,12 @@ import {environment} from "../../../environments/environment";
 })
 export class ChatButtonComponent {
 
-  public readonly isChatEnabled = environment.featureFlag_chatbotEnabled;
+  public isChatEnabled: boolean;
   private _bottomSheet = inject(MatBottomSheet);
+
+  constructor(private featureFlagService: FeatureFlagService) {
+    this.isChatEnabled = this.featureFlagService.isChatbotEnabled();
+  }
 
   openChat(): void {
     this._bottomSheet.open(ChatComponent);

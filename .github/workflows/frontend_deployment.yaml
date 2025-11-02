@@ -3,11 +3,16 @@ name: frontend deployment
 on:
   workflow_dispatch:
     inputs:
-      isChatbotEnabled:
-        description: 'feature flag for enabling the chatbot'
+      isAnimationEnabled:
+        description: 'spline animation is enabled '
         required: false
         type: boolean
-        default: true
+        default: false
+      isChatbotEnabled:
+        description: 'chatbot is enabled'
+        required: false
+        type: boolean
+        default: false
   push:
     branches:
       - prod
@@ -36,12 +41,16 @@ jobs:
       - name: 🏁 Update feature flag environment variables
         run: |
           if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            ANIMATION_ENABLED="${{ github.event.inputs.isAnimationEnabled }}"
             CHATBOT_ENABLED="${{ github.event.inputs.isChatbotEnabled }}"
           else
+            ANIMATION_ENABLED="${{ vars.FEATURE_FLAG_ANIMATION_ENABLED }}"
             CHATBOT_ENABLED="${{ vars.FEATURE_FLAG_CHATBOT_ENABLED }}"
           fi
 
+          echo "Setting featureFlag_animationEnabled to $ANIMATION_ENABLED"
           echo "Setting featureFlag_chatbotEnabled to $CHATBOT_ENABLED"
+          sed -i "s/\"FEATURE_FLAG_ANIMATION_ENABLED\"/$ANIMATION_ENABLED/g" ./src/environments/environment.prod.ts
           sed -i "s/\"FEATURE_FLAG_CHATBOT_ENABLED\"/$CHATBOT_ENABLED/g" ./src/environments/environment.prod.ts
 
       - name: 🚧 Build project for production
@@ -54,6 +63,7 @@ jobs:
           cp "./src/sitemap.xml" "./docs/sitemap.xml"
 
           if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "FeatureFlag featureFlag_animationEnabled updated to ${{ github.event.inputs.isAnimationEnabled }}" >> ./docs/workflow_dispatch.txt
             echo "FeatureFlag featureFlag_chatbotEnabled updated to ${{ github.event.inputs.isChatbotEnabled }}" >> ./docs/workflow_dispatch.txt
           fi
 
