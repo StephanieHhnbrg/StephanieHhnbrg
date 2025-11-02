@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {environment} from "../../environments/environment";
+import {ChatService} from "./chat.service";
+import {BehaviorSubject, Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -7,17 +9,29 @@ import {environment} from "../../environments/environment";
 export class FeatureFlagService {
 
   private readonly isSafari: boolean;
-  private readonly isChatbotAlive: boolean;
 
-  constructor() {
+  private isChatbotEnabled$ = new BehaviorSubject<boolean>(false);
+
+  constructor(private chatService: ChatService) {
     this.isSafari = /^((?!chrome|android).)*safari/i.test(window.navigator.userAgent);
-    this.isChatbotAlive = true; // TODO: do health check
+
+    if (!environment.featureFlag_chatbotEnabled) {
+      this.isChatbotEnabled$.next(false);
+    } else {
+      this.chatService.checkIfBotIsAlive();
+      this.chatService.getBotIsAliveObservable().subscribe(isAlive => {
+        this.isChatbotEnabled$.next(isAlive);
+        if (isAlive) {
+          this.chatService.initMessages();
+        }
+      });
+    }
   }
 
   public isAnimationEnabled(): boolean {
     return environment.featureFlag_animationEnabled && !this.isSafari;
   }
-  public isChatbotEnabled(): boolean {
-    return environment.featureFlag_chatbotEnabled && this.isChatbotAlive;
+  public getChatbotEnabledObservable(): Observable<boolean> {
+    return this.isChatbotEnabled$.asObservable();
   }
 }

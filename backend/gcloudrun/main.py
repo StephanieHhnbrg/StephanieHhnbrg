@@ -1,4 +1,4 @@
-import functions_framework
+# import functions_framework # gcloudrun
 import os
 from flask import Flask, request, jsonify, make_response
 
@@ -14,17 +14,20 @@ ALLOWED_ORIGINS = (
   else ["https://stephaniehhnbrg.github.io"]
 )
 
-@app.route("/ask", methods=["POST", "OPTIONS"])  #local dev
+@app.route("/ask", methods=["POST", "OPTIONS"])  # local dev
 # @functions_framework.http # gcloudrun
 def ask():
   if request.method == 'OPTIONS':
     return handle_cors(request)
 
   question = request.json.get('question')
-  if LOCAL_RUN is False:
-    log_message_to_firebase(question)
-  context = get_RAG_context(question)
-  answer = query_llm(context, question)
+  if question == "HEALTH_CHECK":
+    answer = ""
+  else:
+    if LOCAL_RUN is False:
+      log_message_to_firebase(question)
+    context = get_RAG_context(question)
+    answer = query_llm(context, question)
 
   return create_response(request, {"answer": answer})
 

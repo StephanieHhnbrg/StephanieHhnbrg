@@ -11,9 +11,12 @@ export class ChatService {
 
   private chatMessages: { role: 'bot'|'user', text: string, failed?: boolean }[] = [];
   private botMssgReceived$ = new Subject<{ role: 'bot', text: string }>();
+  private botIsAlive$ = new Subject<boolean>();
 
   constructor(private http: HttpClient,
-              private translate: TranslateService) {
+              private translate: TranslateService) {}
+
+  public initMessages() {
     let text = this.translate.instant("CHAT.INIT_MSSG");
     this.chatMessages.push({ role: 'bot', text });
   }
@@ -24,6 +27,28 @@ export class ChatService {
 
   public getBotMssgReceivedObservable(): Observable<{ role: 'bot', text: string }> {
     return this.botMssgReceived$.asObservable();
+  }
+
+  public getBotIsAliveObservable(): Observable<boolean> {
+    return this.botIsAlive$.asObservable();
+  }
+
+  public checkIfBotIsAlive() {
+    const endpoint = environment.chatEndpoint;
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+      })
+    };
+    let question = "HEALTH_CHECK";
+    return this.http.post<{ answer: string }>(endpoint, JSON.stringify({question}), httpOptions).subscribe({
+      next: () => {
+        this.botIsAlive$.next(true);
+      },
+      error: () => {
+        this.botIsAlive$.next(false);
+      }
+    });
   }
 
   public getResponseForUserMessage(question: string): Subscription {
@@ -42,7 +67,6 @@ export class ChatService {
         this.botMssgReceived$.next({role: 'bot', text});
       },
       error: (err) => {
-        console.log(err);
         let messages = this.chatMessages.filter(mssg => mssg.text == question);
         if (messages.length > 0) {
           messages[messages.length -1].failed = true;

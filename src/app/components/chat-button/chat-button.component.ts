@@ -10,11 +10,13 @@ import {FeatureFlagService} from "../../services/feature-flag.service";
 })
 export class ChatButtonComponent {
 
-  public isChatEnabled: boolean;
+  public isChatEnabled = false;
   private _bottomSheet = inject(MatBottomSheet);
 
   constructor(private featureFlagService: FeatureFlagService) {
-    this.isChatEnabled = this.featureFlagService.isChatbotEnabled();
+    this.featureFlagService.getChatbotEnabledObservable().subscribe(isEnabled => {
+      this.isChatEnabled = isEnabled;
+    });
   }
 
   openChat(): void {

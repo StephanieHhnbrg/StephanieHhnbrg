@@ -29,7 +29,7 @@ Start the server with your Groq API key as an environment variable: \
 4. Test the endpoint 
 - Use curl to test from the command line:
 ``` 
-  curl -X POST https://chatbot-atmljzwjra-ew.a.run.app/ask \
+  curl -X POST http://127.0.0.1:8000/ask \
     -H "Content-Type: application/json" \
     -d '{"question": "What is Stephanies latest certification?"}'
 ```
