@@ -73,3 +73,23 @@ mat-card-header, mat-card-content {
     max-width: 500px;
   }
 }
+
+.unavailable-certs {
+  line-height: 1.8;
+}
+
+.unavailable-certs a {
+  color: white;
+  background: linear-gradient(117deg,rgba(178, 175, 229, 1) 0%, rgba(148, 14, 181, 0.84) 37%, rgba(65, 146, 204, 0.73) 72%, rgba(18, 14, 14, 0.88) 90%);
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 14px;
+  text-decoration: none;
+  border: white 1px solid;
+  margin: 2px;
+}
+
+.unavailable-certs a:hover {
+  background: rgba(148, 14, 181, 0.84);
+  border: transparent 1px solid;
+}

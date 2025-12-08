@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {map, Observable, ReplaySubject, Subscription} from "rxjs";
+import {BehaviorSubject, map, Observable, ReplaySubject, Subscription} from "rxjs";
 import {environment} from '../../environments/environment';
 import {CreedlyResponse} from "../data/creedly-response.data";
 import {Badge} from "../data/badge.data";
@@ -12,15 +12,31 @@ import {JAVA_CERT} from "../data/java-cert.data";
 export class CreedlyService {
 
   private data: Badge[] = [];
+
+  private isLoading$ = new BehaviorSubject<boolean>(false);
+  private tries = 0;
   private fetchData$ = new ReplaySubject<Badge[]>(1);
 
   constructor(private http: HttpClient) { }
 
   public triggerDataFetching(): Subscription {
+    this.tries++;
+    this.isLoading$.next(true);
     return this.fetchCreedlyData().subscribe(response => {
       this.data = [JAVA_CERT].concat(response);
       this.fetchData$.next(this.data);
+      this.isLoading$.next(false);
+    }, () => {
+      if (this.tries < 3) {
+        this.triggerDataFetching();
+      } else {
+        this.isLoading$.next(false);
+      }
     });
+  }
+
+  public getLoadingObservable(): Observable<Boolean> {
+    return this.isLoading$.asObservable();
   }
 
   public getDataObservable(): Observable<Badge[]> {

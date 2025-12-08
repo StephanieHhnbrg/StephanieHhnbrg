@@ -32,6 +32,10 @@
   },
   "TALKS.UPCOMING": "upcoming",
   "CERTIFICATIONS.ISSUED_BY": "issued by",
+  "CERTIFICATIONS.LOADING": "Gathering earned certifications …",
+  "CERTIFICATIONS.NOT_AVAILABLE.PRE": "⚠️ Stephanie's certifications are temporarily inaccessible. Please view them in her ",
+  "CERTIFICATIONS.NOT_AVAILABLE.LINK_TEXT": "badge wallet",
+  "CERTIFICATIONS.NOT_AVAILABLE.POST": ".",
   "CHAT": {
     "INIT_MSSG": "<p>\uD83D\uDC4B Hi there! I'm Stephanie's virtual assistant. Ask me anything about her skills, experience, or recent projects.</p>",
     "INPUT_PLACEHOLDER": "Type your question here",

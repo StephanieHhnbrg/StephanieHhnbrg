@@ -1,6 +1,19 @@
 <div class="container">
   <h2>{{"TITLE.CERTIFICATIONS" | translate}}</h2>
-  <div class="row">
+  <div class="row" *ngIf="isLoading">
+    &nbsp;<mat-spinner diameter="18"></mat-spinner>
+    <div><i>&nbsp;&nbsp;&nbsp;{{"CERTIFICATIONS.LOADING" | translate }}</i></div>
+  </div>
+
+  <div class="row" *ngIf="!isLoading">
+    <div *ngIf="badges.length == 0">
+      <i class="unavailable-certs">
+        {{"CERTIFICATIONS.NOT_AVAILABLE.PRE" | translate}}
+        <a [href]=credlyLink target="_blank">{{"CERTIFICATIONS.NOT_AVAILABLE.LINK_TEXT" | translate}}</a>
+        {{"CERTIFICATIONS.NOT_AVAILABLE.POST" | translate}}
+      </i>
+    </div>
+
     <mat-card *ngFor="let badge of badges" appearance="outlined">
       <img mat-card-image class="banner-image" [src]="badge.imageLink"
       [ngClass]="{'transparent-banner': badge.date === '2024-06-24',

@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from "rxjs";
 import {CreedlyService} from "../../services/creedly.service";
 import {Badge} from "../../data/badge.data";
+import {environment} from "../../../environments/environment";
 
 @Component({
   selector: 'app-certifications',
@@ -11,7 +12,11 @@ import {Badge} from "../../data/badge.data";
 export class CertificationsComponent implements OnInit, OnDestroy{
 
   public badges: Badge[] = [];
+
+  public isLoading = false;
+  public credlyLink = environment.credlyLink;
   private subscriptions: Subscription[] = [];
+
   constructor(private creedlyService: CreedlyService) {
   }
 
@@ -20,7 +25,10 @@ export class CertificationsComponent implements OnInit, OnDestroy{
       .subscribe(result => {
         this.badges = result;
       }));
-
+    this.subscriptions.push(this.creedlyService.getLoadingObservable()
+      .subscribe(result => {
+        this.isLoading = result.valueOf();
+      }));
   }
 
   ngOnDestroy() {
