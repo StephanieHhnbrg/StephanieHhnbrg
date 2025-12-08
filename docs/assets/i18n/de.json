@@ -32,6 +32,10 @@
   },
   "TALKS.UPCOMING": "demnächst",
   "CERTIFICATIONS.ISSUED_BY": "ausgestellt von",
+  "CERTIFICATIONS.LOADING": "Erworbene Zertifizierungen werden kompiliert …",
+  "CERTIFICATIONS.NOT_AVAILABLE.PRE": "⚠️ Stephanie's Zertifizierungen sind vorübergehend nicht zugänglich. Sie können diese jedoch in ihrem ",
+  "CERTIFICATIONS.NOT_AVAILABLE.LINK_TEXT": "Badge Wallet",
+  "CERTIFICATIONS.NOT_AVAILABLE.POST": " einsehen.",
   "CHAT": {
     "INIT_MSSG": "<p>\uD83D\uDC4B Hallo! Ich bin Stephanies virtueller Assistent. Frag mich alles über ihre Fähigkeiten, Erfahrungen oder aktuelle Projekte.</p>",
     "INPUT_PLACEHOLDER": "Stelle hier deine Frage.",
